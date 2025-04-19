@@ -7,22 +7,24 @@
   <title>Proyectos de Héctor Costa Guzmán</title>
   <style>
     body { font-family:  monospace; font-size: 115%;}
-    .quote { background-color: lightgrey; padding:1rem}
+    .quote { background-color: lightgrey; padding:1rem;display:inline-block;margin-top:0}
     a {color:blue!important} a:hover {color:darkblue!important}
     h3 { color: rgb(43, 43, 43); clear: left; float: left; margin: 0; margin-top: -1.1rem; width: 100%; max-width: 650px; position: relative; z-index:-1} 
     h3::after { content: ""; position: absolute; bottom: 0; left: 0; height: 2px; width: 100%; background: linear-gradient(to right, rgb(43, 43, 43), rgba(43, 43, 43, 0)); z-index:0;}
     .year-section > ul { margin:0; padding-left:75px;margin-top:5px;z-index:-1;}
+    ul.no-top-margin { margin-top:0;}
     li { padding-bottom:0.1rem;z-index:1;}
     #lightbox{display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999; overflow: auto; }
     #lightbox span {position: absolute; top: 1rem; right: 2rem; color: white; font-size: 2rem; cursor: pointer; z-index: 10000;}
     #lightbox-content { max-width: 80vw; max-height: 80vh; box-shadow: 0 0 20px rgba(0,0,0,0.5); border-radius: 10px; display: flex; justify-content: center; align-items: center; background: #000;}
+    button { background:none;padding:0;border:0; color:blue!important;text-decoration:underline;cursor:pointer} button:hover {color:darkblue!important;}
   </style>
 </head>
 <body>
-  <a href="#" onclick="location.href='/'">Volver</a>
+  <button onclick="location.href='/'">Volver</button>
   <h2>Proyectos de Héctor Costa Guzman</h2>
   <p class="quote">
-    <i>"La vida se entiende mirando atrás, pero se vive empezando proyectos que casi nunca terminas." — yo filosofando en pijama</i>
+    <i>"La vida se entiende mirando hacia atrás y se vive empezando proyectos." — yo, pseudofilósofo</i>
   </p>
   <div class="year-section">
     <ul>
@@ -139,7 +141,7 @@
 
   <div class="year-section">
     <ul>
-      <li>Tu Primer Videojuego con Unity 2021 [<b>Curso</b>, Unity, C#]:
+      <li>Tu Primer Videojuego con Unity 2021 [<b>Curso</b>, Unity]:
         <a href="https://www.udemy.com/course/unity-5-primer-videojuego-2d-multiplataforma">link</a>
       </li>
       <li>Apuntes Unity 2021 y Visual Scripting [<b>Docs</b>, Unity]:
@@ -149,7 +151,7 @@
         <a href="https://www.udemy.com/course/python-desarrollo-interfaces-graficas-qt-pyside/">link</a>,
         <a href="https://hektorprofe.github.io/docs/qt-pyside/">docs</a>  
       </li>
-      <li>Jumping Robot 3D en Unity 2021 [<b>PDF</b>, Unity, C#]:
+      <li>Jumping Robot 3D en Unity 2021 [<b>PDF</b>, Unity]:
         <a href="/media/jumping-robot.mp4">demo</a>,
         <a href="/media/jumping-robot-3d-unity-2021.pdf">pdf</a>
       </li>
@@ -159,19 +161,19 @@
 
   <div class="year-section">
     <ul>
-      <li>CPU 3D Engine [<b>Desktop</b>, C++, SDL2]:
-        <a href="https://github.com/hektorprofe/3d-graphics">repo</a>
-      </li>
       <li>ECS 2D Engine (<i>stalled</i>) [<b>Desktop</b>, C++, SDL2, LUA]:
         <a href="https://github.com/hcosta/2d-engine">repo</a>
+      </li>
+      <li>CPU 3D Engine [<b>Desktop</b>, C++, SDL2]:
+        <a href="https://github.com/hektorprofe/3d-graphics">repo</a>
       </li>
       <li>Curso API Rest con Django Rest Framework [<b>Docs</b>, Django]:
         <a href="https://hektorprofe.github.io/docs/django/api-django-rest/">docs</a>
       </li>
-      <li>Apuntes Django Framework [<b>Docs</b>, Django]: 
+      <li>Colección de tutoriales de Django Framework [<b>Docs</b>, Django]: 
         <a href="https://hektorprofe.github.io/docs/academia/django/tutoriales/">docs</a>
       </li>
-      <li>GM de Nice Try (<i>Discord, Logs, Inventario...</i>) [<b>WoW</b>]: 
+      <li>GM de Nice Try (<i>Discord, Web, Logs, Inventario...</i>) [<b>WoW</b>]: 
         <a href="https://www.youtube.com/watch?v=UG19u3B59mU">video</a>,
         <a href="https://www.youtube.com/watch?v=3lvMi2PS56k">video</a>
     </li>
@@ -232,7 +234,7 @@
       <li>Academia de Hektor Profe [<b>Web</b>, Nuxt 2, Django]:
         <a href="/media/demo-academia.mp4">demo</a>
       </li>
-      <li>Django Async-fetch [<b>Module</b>, Python, Django]:
+      <li>Django Async-fetch [<b>Module</b>, Django]:
         <a href="https://github.com/hcosta/django-async-fetch">repo</a>
       </li>
       <li>Aprende Django creando Proyectos [<b>Curso</b>, Django]:
@@ -245,18 +247,18 @@
 
   <div class="year-section">
     <ul>
-      <li>Videojuego de Acción RPG con Unity 2017 [<b>Curso</b>, Unity 2017, C#]: 
+      <li>Videojuego de Acción RPG con Unity 2017 [<b>Serie</b>, Unity 2017]: 
         <a href="/media/arpg-unity.mp4">demo</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-unity/#juego-rpg-2d-estilo-zelda">docs</a>
       </li>
-      <li>Tutoriales intermedios de Unity 5 [<b>Serie</b>, Unity 5, C#]: 
+      <li>Tutoriales intermedios de Unity 5 [<b>Serie</b>, Unity 5]: 
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-unity/#tutoriales-intermedios">docs</a>
       </li>
-      <li>Videojuego de Plataformas con Unity 5 [<b>Curso</b>, Unity 5, C#]: 
+      <li>Videojuego de Plataformas con Unity 5 [<b>Serie</b>, Unity 5]: 
         <a href="/media/plataformas-unity.mp4">demo</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-unity/#juego-de-plataformas-2d">docs</a>
       </li>
-      <li>Tu Primer Videojuego Completo con Unity 5 [<b>Curso</b>, Unity 5, C#]: 
+      <li>Tu Primer Videojuego Completo con Unity 5 [<b>Serie</b>, Unity 5]: 
         <a href="/media/jumping-guy.mp4">demo</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-unity/#primer-videojuego-2d">docs</a>
       </li>
@@ -266,17 +268,17 @@
 
   <div class="year-section">
     <ul>
-      <li>Fundamentos de Unity 5 [<b>Serie</b>, Unity 5, C#]: 
+      <li>Fundamentos de Unity 5 [<b>Serie</b>, Unity 5]: 
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-unity/#conceptos-basicos">docs</a>
       </li>
-      <li>Repaso del Lenguaje C# [<b>Tutorial</b>, C#]: 
+      <li>Introducción al lenguaje C# [<b>Serie</b>, C#]: 
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-unity/#introduccion-al-lenguaje-c">docs</a>
       </li>
-      <li>Videojuego Beat'em Up con GameMaker [<b>Curso</b>, GM:S]: 
+      <li>Videojuego Beat'em Up con GameMaker [<b>Serie</b>, GM:S]: 
         <a href="/media/beatemup-gm.mp4">demo</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-gamemaker/#juego-beatem-up">docs</a>
       </li>
-      <li>Videojuego Action RPG con GameMaker [<b>Curso</b>, GM:S]:
+      <li>Videojuego Action RPG con GameMaker [<b>Serie</b>, GM:S]:
         <a href="/media/action-rpg.mp4">demo</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-gamemaker/#juego-action-rpg">docs</a>
       </li>
@@ -295,20 +297,25 @@
       <li>Videojuego Swordsman's life [<b>Game</b>, GM:S]:
         <a href="/media/swordsman-life.mp4">demo</a>
       </li>
-      <li>Videojuego Shooter TDS con GameMaker [<b>Curso</b>, GM:S]:
+      <li>Videojuego Shooter TDS con GameMaker [<b>Serie</b>, GM:S]:
         <a href="/media/tds-shooter.mp4">demo</a>,
+        <a href="/media/top-down-shooter.pdf">pdf</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-gamemaker/#juego-shooter-tds">docs</a>
       </li>
-      <li>Videojuego PONG Remake con GameMaker [<b>Curso</b>, GM:S]:
+      <li>Videojuego PONG Remake con GameMaker [<b>Serie</b>, GM:S]:
         <a href="/media/pong-remake.mp4">demo</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-gamemaker/#juego-arcade-pong">docs</a>
       </li>
-      <li>Tu Primer Videojuego con Game Maker [<b>Curso</b>, GM:S]:
+      <li>Tu Primer Videojuego con Game Maker [<b>Serie</b>, GM:S]:
         <a href="/media/primer-videojuego.mp4">demo</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-gamemaker/#tu-primer-videojuego">docs</a>
       </li>
-      <li>Aprende el Lenguaje GML de Game Maker [<b>Curso</b>, GM:S]:
+      <li>Aprende el Lenguaje GML de Game Maker [<b>Serie</b>, GM:S]:
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-gamemaker/#el-lenguaje-gml">docs</a>
+      </li>      
+      <li>Curso Maestro de Python 3 desde cero [<b>Curso</b>, Python]: 
+        <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/">link</a>,
+        <a href="https://hektorprofe.github.io/docs/python/">docs</a>
       </li>
       <li>Artículos sobre matemáticas y geometría [<b>Docs</b>]:
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/articulos/el-eje-de-coordenadas/">docs</a>
@@ -336,9 +343,13 @@
         <a href="/media/simple-fighter.mp4">demo</a>,
         <a href="https://github.com/hektorprofe/Referencia-y-ejemplos-GameMaker-Studio/tree/master/aprendizaje/avanzados/25_simple_fighter.gmx">docs</a>
       </li>
-      <li>Videojuego RPG Next Gen [<b>Game</b>, GM:S]: 
+      <li>Videojuego ARPG Next Gen [<b>Game</b>, GM:S]: 
         <a href="/media/rpg-next-gen-gm.mp4">demo</a>,
         <a href="https://github.com/hektorprofe/Referencia-y-ejemplos-GameMaker-Studio/tree/master/aprendizaje/plataformas/13_rpg_next_gen.gmx">docs</a>
+      </li>
+      <li>Videojuego Prueba ARPG [<b>Game</b>, GM:S]: 
+        <a href="/media/primer-concepto-rpg.mp4">demo</a>,
+        <a href="https://github.com/hektorprofe/Referencia-y-ejemplos-GameMaker-Studio/tree/master/aprendizaje/plataformas/12_primer_concepto_rpg.gmx">docs</a>
       </li>
       <li>Videojuego Hexagon Tribute [<b>Android</b>, GM:S]:
         <a href="/media/hexagon-tribute.mp4">demo</a>,
@@ -347,7 +358,7 @@
       </li>
       <li>Videojuego Tetris Clone [<b>Game</b>, GM:S]:
         <a href="/media/tetris-clone.mp4">demo</a>,
-        <a href="/https://github.com/hektorprofe/Referencia-y-ejemplos-GameMaker-Studio/tree/master/aprendizaje/logic_challenges/02_tetris.gmx">docs</a>
+        <a href="https://github.com/hektorprofe/Referencia-y-ejemplos-GameMaker-Studio/tree/master/aprendizaje/logic_challenges/02_tetris.gmx">docs</a>
       </li>
       <li>Videojuego La Brisca Reloaded [<b>Game</b>, GM:S]:
         <a href="/media/brisca-reloaded.mp4">demo</a>,
@@ -366,90 +377,161 @@
       <li>Referencia GameMaker (60+ ejemplos explicados) [<b>Docs</b>, GM:S]:
         <a href="https://github.com/hektorprofe/Referencia-y-ejemplos-GameMaker-Studio/tree/master/aprendizaje">repo</a>
       </li>
-      <li>Curso Maestro de Python 3 desde cero [<b>Curso</b>, Python]: 
-        <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/">link</a>,
-        <a href="https://hektorprofe.github.io/docs/python/">docs</a>
-        
-      </li>
     </ul>
     <h3>2015</h3>
   </div>
 
   <div class="year-section">
     <ul>
-      <li>HTML Enconder [<b>Web</b>, JavaScript]</li>
-      <li>Introducción a la Programación con Pseudocódigo [<b>Curso</b>, PseInt]</li>
-      <li>Manga Phoenix [<b>Android</b>, Java, Cordova, Angularjs, Python, Django]</li>
-      <li>Página para escuela de yoga y pilates [<b>Web</b>, Wordpress, PHP]</li>
+      <li>Introducción a la Programación con Pseudocódigo [<b>Curso</b>]:
+        <a href="https://www.udemy.com/course/introduccion-a-la-programacion-con-pseudocodigo-practico/">link</a>
+      </li>
+      <li>Manga Phoenix [<b>Android</b>, Java, Angularjs, Django]:
+        <a href="https://web.archive.org/web/20160314111349/http://mangaphoenixapp.com/en/">archive</a>
+      </li>
+      <li>HTML Enconder [<b>Web</b>, JavaScript]:
+        <a href="https://github.com/hcosta/html-encoder">repo</a>
+      </li>
     </ul>
     <h3>2014</h3>
   </div>
 
   <div class="year-section">
     <ul>
-      <li>Django Easy-registration [<b>Module</b>, Python, Django]</li>
-      <li>E-commerce para administración de loterías [<b>Web</b>, Python, Django]</li>
-      <li>E-commerce para venta de bombillas led [<b>Web</b>, Python, Django]</li>
-      <li>Página para grupo coral [<b>Web</b>, Python, Django]</li>
-      <li>E-commerce para venta de vapeadores [<b>Web</b>, Python, Django]</li>
-      <li>Página con catálogo para constructora [<b>Web</b>, Python, Django]</li>
+      <li>Django Easy-registration [<b>Module</b>, Django]:
+        <a href="https://github.com/hcosta/django-easyregistration">repo</a>
+      </li>
+      <li>Página administración de loterías [<b>Web</b>, Django]</li>
+      <li>Página tienda de bombillas led [<b>Web</b>, Django]</li>
+      <li>Página tienda de vapeadores [<b>Web</b>, Django]</li>
+      <li>Página tienda de raquetas de Paddle [<b>Web</b>, Django]</li>
     </ul>
     <h3>2013</h3>
   </div>
 
   <div class="year-section">
     <ul>
-      <li>E-commerce para tienda de raquetas [<b>Web</b>, Python, Django]</li>
-      <li>E-commerce para tienda de calzados [<b>Web</b>, Python, Django]</li>
-      <li>Página para empresa de prevención de incendios [<b>Web</b>, Python, Django]</li>
-      <li>E-commerce para tienda de colorantes [<b>Web</b>, Python, Django]</li>
-      <li>Página para gestoría y directorio de empresas [<b>Web</b>, Python, Django]</li>
-      <li>Página para clínica de otorrinolaringología [<b>Web</b>, Python, Django]</li>
-      <li>E-commerce para tienda de soportes digitales [<b>Web</b>, Python, Django]</li>
-      <li>Página para escritor y su obra [<b>Web</b>, PHP, Wordpress]</li>
-      <li>Simulador Primitiva [<b>Desktop</b>, Python]</li>
-      <li>Gestor de expedientes de alumnos [<b>Module</b>, OpenERP, Python]</li>
-      <li>Control de inventarios e incidencias [<b>Module</b>, OpenERP, Python]</li>
-      <li>Monitor de número de impresiones [<b>Module</b>, OpenERP, Python]</li>
-      <li>Pythoneando (Aprendiendo Python 2) [<b>Docs</b>, Python]</li>
-      <li>Migdc CMS: Mi Gestor de Contenidos [<b>Web</b>, PHP, SQLite]</li>
+      <li>Página tienda para marca de calzados [<b>Web</b>, Django]: 
+        <a href="/media/calzados.jpg">jpg</a>, 
+        <a href="/media/calzados-1.jpg">jpg</a> 
+      </li>
+      <li>Página tienda de colorantes alimentarios [<b>Web</b>, Django]: 
+        <a href="/media/colorantes.jpg">jpg</a>, 
+        <a href="/media/colorantes-1.jpg">jpg</a> 
+      </li>
+      <li>Página catálogo de soportes digitales [<b>Web</b>, Django]
+        <a href="/media/soportes-digitales.jpg">jpg</a>, 
+        <a href="/media/soportes-digitales-1.jpg">jpg</a> 
+      </li>
+      <li>Página portafolio de constructora [<b>Web</b>, Django]: 
+        <a href="/media/constructora.jpg">jpg</a>, 
+        <a href="/media/constructora-1.jpg">jpg</a> 
+      </li>
+      <li>Página empresa prevención de incendios [<b>Web</b>, Django]: 
+        <a href="/media/incendios.jpg">jpg</a>, 
+        <a href="/media/incendios-2.jpg">jpg</a> 
+      </li>
+      <li>Página gestoría y directorio de empresas [<b>Web</b>, Django]
+        <a href="/media/gestoria.jpg">jpg</a>,
+        <a href="/media/fidelity.jpg">jpg</a>
+      </li>
+      <li>Página clínica de otorrinolaringología [<b>Web</b>, Django]: 
+        <a href="/media/instituto.jpg">jpg</a>, 
+        <a href="/media/instituto-1.jpg">jpg</a> 
+      </li>
+      <li>Página escuela de yoga y pilates [<b>Web</b>, Wordpress]: 
+        <a href="https://web.archive.org/web/20141221111047/http://pilatesyogazaragoza.com/">archive</a>
+      </li>
+      <li>Página escritor y su obra [<b>Web</b>, Wordpress]:
+        <a href="https://web.archive.org/web/20190417173516/http://www.alexdesande.com/">archive</a></li>
+      <li>Gestión de expedientes para secretaría [<b>OpenERP</b>]:
+        <a href="/media/secretaria-openerp.png">logo</a>,
+        <a href="/media/secretaria-openerp.zip">zip</a>
+      </li>
+      <li>Control de inventarios e incidencias [<b>OpenERP</b>]:
+        <a href="/media/inventari-openerp.png">logo</a>,
+        <a href="/media/inventari-openerp.zip">zip</a>
+      </li>
+      <li>Monitor de impresiones del profesorado [<b>OpenERP</b>]:
+        <a href="/media/impressions-openerp.png">logo</a>,
+        <a href="/media/impressions-openerp.zip">zip</a>
+      </li>
+      <li>Pythoneando (Aprendiendo Python 2) [<b>Docs</b>, Python]:
+        <a href="https://github.com/hektorprofe/aprendiendo-python-2">repo</a>
+      </li>
+      <li>Migdc CMS: Mi Gestor de Contenidos [<b>Web</b>, PHP, SQLite]:
+        <a href="https://github.com/hcosta/migdc-cms">repo</a>
+      </li>
+      <li>Simulador Primitiva [<b>Desktop</b>, Python]:
+        <a href="https://github.com/hcosta/primitiva-python">repo</a>
+      </li>
     </ul>
     <h3>2012</h3>
   </div>
 
   <div class="year-section">
     <ul>
-      <li>Página para grupo de música [<b>Web</b>, PHP]</li>
-      <li>XinXat - Treball de síntesis [<b>Web</b>, PHP, Java]</li>
-      <li>La Brisca [<b>Game</b>, Java]</li>
-      <li>Manga Downloader [<b>Module</b>, PHP]</li>
-      <li>XML2PHP-Forms [<b>Module</b>, PHP]</li>
+      <li>XinXat - Treball de síntesis [<b>Web</b>, PHP, Java]:
+        <a href="https://web.archive.org/web/20141218132920/http://xinxat.com/en">archive</a>
+      </li> 
+      <li>Página para grupo de música [<b>Web</b>, PHP]:
+        <a href="https://web.archive.org/web/20110701170820/http://www.suiteofficial.net/">archive</a>
+      </li>
+      <li>La Brisca [<b>Game</b>, Java]:
+        <a href="https://raw.githubusercontent.com/hcosta/la-brisca/master/docs/demo.gif">demo</a>, 
+        <a href="https://github.com/hcosta/la-brisca">repo</a>
+      </li>
+      <li>Manga Downloader [<b>Module</b>, PHP]:
+        <a href="https://github.com/hcosta/manga-downloader">repo</a>
+      </li>
+      <li>XML2PHP-Form [<b>Module</b>, PHP]:
+        <a href="https://github.com/hcosta/xml2php-form">repo</a>
+      </li>
     </ul>
     <h3>2011</h3>
   </div>
 
   <div class="year-section">
     <ul>
-      <li>MySeriesList - Treball de síntesis [<b>Web</b>, PHP, Docs]</li>
-      <li>Sistemes Gestors de Bases de Dades - Treball de recerca [<b>PDF</b>]</li>
-      <li>Control de accesos para panel Virdi [<b>Web</b>, <b>Desktop</b>, PHP, Delphi]</li>
-      <li>Control de sondas de temperatura [<b>Web</b>, <b>Desktop</b>, PHP, Visual Basic]</li>
-      <li>Proyecto de geolocalización de vehículos [<b>Docs</b>, Testing]</li>
+      <li>MySeriesList - Treball de síntesis [<b>Web</b>, PHP, Docs]:
+        <a href="https://web.archive.org/web/20140115070646/http://myserieslist.com/">archive</a>
+      </li>
+      <li>Servei control d'accesos [<b>Software</b>, PHP, Delphi]:
+        <a href="/media/accesos-aec.png">png</a>,
+        <a href="/media/accesos-aec-2.png">png</a>
+      </li>
+      <li>Servei sondes temperatura [<b>Software</b>, PHP, Visual Basic]:
+        <a href="/media/temperaturas-aec-3.png">png</a>,
+        <a href="/media/temperaturas-aec.png">png</a>,
+        <a href="/media/temperaturas-aec-2.png">png</a>
+      </li>
+      <!-- <li>Proyecto de geolocalización de vehículos [<b>Docs</b>, Testing]</li> -->
+      <li>Sistemes de Gestió de Bases de Dades - Treball de recerca [<b>PDF</b>]:
+        <a href="/media/sgbd-hcg-2010.pdf">pdf</a>
+      </li>
     </ul>
     <h3>2010</h3>
   </div>
 
   <div class="year-section">
     <ul>
-      <li>Página para molino de aceite [<b>Web</b>, Angular.js]</li>
-      <li>Yasps (Yet Another Stupid Polling System) [<b>Web</b>, Dreamweaver, PHP]</li>
+      <li>Yasps (Yet Another Stupid Polling System) [<b>Web</b>, PHP]:
+        <a href="/media/yasps.png">png</a>
+      </li>
+      <li>Página para molino y tienda de aceite [<b>Web</b>, PHP, Angular.js]:
+        <a href="https://web.archive.org/web/20111123143049/http://www.art-oli.com/">archive</a>
+      </li>
     </ul>
   </div>
 
   <div class="year-section">
-    <ul style="margin-top:0px">
-      <li>Co-GM del Clan §hâdøw§ [<u>Jedi Academy</u>, <b>Web</b>, Servidor]</li>
-      <li>Tecnologies sense fils (Wi-Fi i Bluetooth) - Treball de recerca [<b>PDF</b>]</li>
+    <ul class="no-top-margin">
+      <li>Co-GM del Clan §hâdøw§ [<b>Jedi Academy</b>, Web, Dreamweaver]:
+        <a href="https://web.archive.org/web/20110902121733/http://shadows.nls.es/portada2.htm">archive</a>
+      </li>
+      <li>Tecnologies sense fils - Treball de recerca [<b>PDF</b>]:
+        <a href="/media/tecnologies-sense-fils-hcg-2007.pdf">pdf</a>
+      </li>
     </ul>
   </div>
 
