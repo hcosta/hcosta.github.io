@@ -17,11 +17,14 @@
     #lightbox{display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999; overflow: auto; }
     #lightbox span {position: absolute; top: 1rem; right: 2rem; color: white; font-size: 2rem; cursor: pointer; z-index: 10000;}
     #lightbox-content { max-width: 80vw; max-height: 80vh; box-shadow: 0 0 20px rgba(0,0,0,0.5); border-radius: 10px; display: flex; justify-content: center; align-items: center; background: #000;}
-    button { background:none;padding:0;border:0; color:blue!important;text-decoration:underline;cursor:pointer} button:hover {color:darkblue!important;}
+    button { background:none;padding:0;border:0; color:blue!important;text-decoration:underline;cursor:pointer;font-size:15px;font-family:  monospace!important;} button:hover {color:darkblue!important;}
+    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); font-size: 3rem; color: white; cursor: pointer; user-select: none; z-index: 10000; }
+    .nav-left { left: 1rem; }
+    .nav-right { right: 1rem; }
   </style>
 </head>
 <body>
-  <button onclick="location.href='/'">Volver</button>
+  <button onclick="location.href='/'">ᐊ Atrás</button>
   <h2>Proyectos de Héctor Costa Guzman</h2>
   <p class="quote">
     <i>"La vida se entiende mirando hacia atrás y se vive empezando proyectos." — yo, pseudofilósofo</i>
@@ -30,10 +33,10 @@
     <ul>
       <li>Podcast Jodida Realidad <i>(próximamente)</i></li>
       <li>
-        Academia Hektor Profe Serverless [<b>Web</b>, Nuxt 3, Supabase, Paddle]: 
+        Academia Hektor Profe Serverless [<b>Web</b>, Nuxt 3, Supabase]: 
         <a href="/media/hektor-profe-3.mp4">demo</a> 
-        <!-- <a href="/media/hektor-profe-3-1.png">png</a>, 
-        <a href="/media/hektor-profe-3-2.png">png</a> -->
+        <!-- <a href="/media/hektor-profe-3-1.png">img</a>, 
+        <a href="/media/hektor-profe-3-2.png">img</a> -->
         </li>
     </ul>
     <h3>2025</h3>
@@ -42,75 +45,74 @@
   <div class="year-section">
     <ul>
       <li>
-        Videojuego Neon Pong [<b>Curso</b>, Godot 4]: 
-        <a href="https://odysee.com/@hektor:3/Curso-Neon-Pong-en-Godot-4:f">video</a>, 
-        <a href="https://github.com/hektorprofe/godot-arcades/wiki/01-Pong-(1972)">wiki</a>
-        <!-- <a href="/media/videojuego-pong.gif">gif</a>  -->
-      </li>
-      <li>
-        Descubre Godot [<b>Curso</b>, Godot 4]: 
-        <a href="https://odysee.com/@hektor:3/curso-descubre-Godot-4:7">video</a>, 
-        <a href="https://github.com/hektorprofe/godot-descubre/wiki/01-Introducci%C3%B3n">wiki</a>
-        <!-- <a href="/media/descubre-godot-1.gif">gif</a>,  
-        <a href="/media/descubre-godot-2.gif">gif</a> -->
-      </li>
-      <li>
         Videojuego Sokoban [<b>Game</b>, Godot 4]:  
         <a href="/media/videojuego-sokoban.gif">demo</a>,
         <a href="https://github.com/hektorprofe/godot-sokoban/wiki">wiki</a>
       </li>
       <li>
-        Escuela Godot Arcano con suscripción [<b>Web</b>, Django, Stripe]:
-        <a href="/media/godot-arcano.mp4">video</a> 
+        Videojuego Neon Pong [<b>Curso</b>, Godot 4]: 
+        <a href="/media/neon-pong.gif">demo</a>, 
+        <a href="https://github.com/hektorprofe/godot-arcades/wiki/01-Pong-(1972)">wiki</a>
+        <!-- <a href="/media/videojuego-pong.gif">gif</a>  -->
       </li>
       <li>
-        Introducción a la programación con Python Arcade [<b>PDF</b>, Python]:  
+        Descubre Godot 4 con Experimentos [<b>Curso</b>, Godot 4]: 
+        <a href="https://github.com/hektorprofe/godot-descubre/wiki">wiki</a>
+        <!-- <a href="/media/descubre-godot-1.gif">gif</a>,  
+        <a href="/media/descubre-godot-2.gif">gif</a> -->
+      </li>
+      <li>
+        Escuela Godot Arcano con suscripción [<b>Web</b>, Django]:
+        <a href="/media/godot-arcano.mp4">demo</a> 
+      </li>
+      <li>
+        Introducción a Python con Python Arcade [<b>PDF</b>, Python]:  
         <a href="/media/introduccion-python-arcade.pdf">pdf</a>
       </li>
     </ul>
-    <h3>2024</h3>
+    <!-- <h3>2024</h3> -->
   </div>
 
   <div class="year-section">
-    <ul>
+    <ul class="no-top-margin">
       <li>
         Python asistido con ChatGPT [<b>Curso</b>, ChatGPT, Python]:
         <a href="https://www.udemy.com/course/python-asistido-chatgpt/">link</a>
       </li>
       <li>
-        Plataforma Aprende GDScript [<b>Web</b>, Django, Godot 3.5 Custom]:
+        Plataforma Aprende GDScript [<b>Web</b>, Django, Godot 3.5]:
         <a href="/media/plataforma-interactiva.mp4">demo</a>
       </li>
       <li>
         Proyecto Arduino: Coche Robótico [<b>Arduino</b>]:
-        <a href="/media/coche-robotico.mp4">record</a>
+        <a href="/media/coche-robotico.mp4">demo</a>
       </li>
       <li>
         Proyecto soldadura: Harpa con sensores [<b>Electrónica</b>]:
-        <a href="/media/harpa-sensores.mp4">record</a>
+        <a href="/media/harpa-sensores.mp4">demo</a>
       </li>
       <li>
         Proyecto soldadura: Altavoces Bluetooth USB [<b>Electrónica</b>]:
-        <a href="/media/altavoces-bluetooth.mp4">record</a>
+        <a href="/media/altavoces-bluetooth.mp4">demo</a>
       </li>
       <li>Proyecto soldadura: Radio FM con pantalla LCD [<b>Electrónica</b>]:
-        <a href="/media/radio-fm.mp4">record</a>
+        <a href="/media/radio-fm.mp4">demo</a>
       </li>
       <li>
         Proyecto soldadura: Consola de juegos Retro [<b>Electrónica</b>]:
-        <a href="/media/consola-retro.mp4">record</a>
+        <a href="/media/consola-retro.mp4">demo</a>
       </li>
       <li>
         Proyecto soldadura: Reloj-Termómetro LED [<b>Electrónica</b>]: 
-        <a href="/media/reloj-termometro.mp4">record</a>
+        <a href="/media/reloj-termometro.mp4">demo</a>
       </li> 
       <li>
         Proyecto soldadura: Fidget Spinner LED [<b>Electrónica</b>]:
-        <a href="/media/fidget-spinner.mp4">record</a>
+        <a href="/media/fidget-spinner.mp4">demo</a>
       </li>
       <li>
         Proyecto soldadura: Generador de señales [<b>Electrónica</b>]: 
-        <a href="/media/generador-senales.jpg">photo</a>
+        <a href="/media/generador-senales.jpg">img</a>
       </li> 
       <!-- <li>
         Proyecto soldadura: Osciloscopio <i>(defectuoso)</i> [<b>Electrónica</b>]
@@ -122,9 +124,10 @@
 
   <div class="year-section">
     <ul>
-      <li>CPU 3D Renderer [<b>Desktop</b>, C++, SDL2]:
-        <a href="https://github.com/hcosta/cpu-3d-graphics">repo</a>,
-        <a href="https://hektorprofe.github.io/docs/graficos-3d/">docs</a>        
+      <li>CPU 3D Engine [<b>Desktop</b>, C++, SDL2]:
+        <a href="/media/cpu-3d-renderer.gif">demo</a>,
+        <a href="https://hektorprofe.github.io/docs/graficos-3d/">docs</a>,  
+        <a href="https://github.com/hcosta/cpu-3d-graphics">repo</a>     
       </li>
       <li>Apuntes sobre C++ moderno [<b>Docs</b>, C++]:
         <a href="https://hektorprofe.github.io/docs/cpp/">docs</a> 
@@ -136,11 +139,11 @@
         <a href="https://hektorprofe.github.io/docs/pygame/">docs</a> 
       </li>
     </ul>
-    <h3>2022</h3>
+    <!-- <h3>2022</h3> -->
   </div>
 
   <div class="year-section">
-    <ul>
+    <ul class="no-top-margin">
       <li>Tu Primer Videojuego con Unity 2021 [<b>Curso</b>, Unity]:
         <a href="https://www.udemy.com/course/unity-5-primer-videojuego-2d-multiplataforma">link</a>
       </li>
@@ -156,15 +159,17 @@
         <a href="/media/jumping-robot-3d-unity-2021.pdf">pdf</a>
       </li>
     </ul>
-    <h3>2021</h3>
+    <!-- <h3>2021</h3> -->
   </div>
 
   <div class="year-section">
-    <ul>
-      <li>ECS 2D Engine (<i>stalled</i>) [<b>Desktop</b>, C++, SDL2, LUA]:
+    <ul class="no-top-margin">
+      <li>ECS 2D Renderer (<i>dropped</i>) [<b>Desktop</b>, C++, SDL2, LUA]:
+        <a href="/media/cpu-2d-engine.gif">demo</a>,
         <a href="https://github.com/hcosta/2d-engine">repo</a>
       </li>
-      <li>CPU 3D Engine [<b>Desktop</b>, C++, SDL2]:
+      <li>CPU 3D Renderer [<b>Desktop</b>, C++, SDL2]:
+        <a href="/media/cpu-3d-graphics.gif">demo</a>,
         <a href="https://github.com/hektorprofe/3d-graphics">repo</a>
       </li>
       <li>Curso API Rest con Django Rest Framework [<b>Docs</b>, Django]:
@@ -207,12 +212,6 @@
       <li>Módulo NumPy para análisis de datos [<b>Docs</b>, Python]:
         <a href="https://hektorprofe.github.io/docs/academia/python/modulo-analitico-numpy/">docs</a>
       </li>
-    </ul>
-    <h3>2019</h3>
-  </div>
-
-  <div class="year-section">
-    <ul>
       <li>Introducción a la programación gráfica con P5.js [<b>Curso</b>, JS]:
         <a href="https://hektorprofe.github.io/docs/academia/javascript/biblioteca-p5js/">docs</a>
       </li>
@@ -234,19 +233,26 @@
       <li>Academia de Hektor Profe [<b>Web</b>, Nuxt 2, Django]:
         <a href="/media/demo-academia.mp4">demo</a>
       </li>
-      <li>Django Async-fetch [<b>Module</b>, Django]:
-        <a href="https://github.com/hcosta/django-async-fetch">repo</a>
-      </li>
+    </ul>
+    <!-- <h3>2019</h3> -->
+  </div>
+
+  <div class="year-section">
+    <ul class="no-top-margin">
       <li>Aprende Django creando Proyectos [<b>Curso</b>, Django]:
         <a href="https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/">link</a>,
         <a href="https://hektorprofe.github.io/docs/django/">docs</a>        
       </li>
+      <li>Django Async-fetch [<b>Module</b>, Django]:
+        <a href="/media/django-async.gif">demo</a>,
+        <a href="https://github.com/hcosta/django-async-fetch">repo</a>
+      </li>
     </ul>
-    <h3>2018</h3>
+    <!-- <h3>2018</h3> -->
   </div>
 
   <div class="year-section">
-    <ul>
+    <ul class="no-top-margin">
       <li>Videojuego de Acción RPG con Unity 2017 [<b>Serie</b>, Unity 2017]: 
         <a href="/media/arpg-unity.mp4">demo</a>,
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-unity/#juego-rpg-2d-estilo-zelda">docs</a>
@@ -286,11 +292,11 @@
         <a href="/media/curso-gamemaker.mp4">demos</a>
       </li>
     </ul>
-    <h3>2016</h3>
+    <!-- <h3>2016</h3> -->
   </div>
 
   <div class="year-section">
-    <ul>
+    <ul class="no-top-margin">
       <li>Desarrollo de Minijuegos con GameMaker [<b>Serie</b>, GM:S]:
         <a href="https://hektorprofe.github.io/docs/escueladevideojuegos/academia-gamemaker/#serie-de-minijuegos">docs</a>
       </li>
@@ -390,55 +396,70 @@
         <a href="https://web.archive.org/web/20160314111349/http://mangaphoenixapp.com/en/">archive</a>
       </li>
       <li>HTML Enconder [<b>Web</b>, JavaScript]:
+        <a href="/media/htmlencoder.gif">demo</a>,
         <a href="https://github.com/hcosta/html-encoder">repo</a>
       </li>
+      <li>Django Easy-registration [<b>Module</b>, Django]:
+        <a href="/media/django-easy.gif">demo</a>,
+        <a href="https://github.com/hcosta/django-easyregistration">repo</a>
+      </li>
     </ul>
-    <h3>2014</h3>
+    <!-- <h3>2014</h3> -->
   </div>
 
   <div class="year-section">
-    <ul>
-      <li>Django Easy-registration [<b>Module</b>, Django]:
-        <a href="https://github.com/hcosta/django-easyregistration">repo</a>
+    <ul class="no-top-margin">
+      <li>Página administración lotería [<b>Web</b>, Django]: 
+        <a href="/media/loterias.jpg">img</a>, 
+        <a href="/media/loterias-2.jpg">img</a>, 
+        <a href="/media/loterias-3.jpg">img</a> 
       </li>
-      <li>Página administración de loterías [<b>Web</b>, Django]</li>
-      <li>Página tienda de bombillas led [<b>Web</b>, Django]</li>
-      <li>Página tienda de vapeadores [<b>Web</b>, Django]</li>
-      <li>Página tienda de raquetas de Paddle [<b>Web</b>, Django]</li>
+      <li>Página pedidos de vapeadores [<b>Web</b>, Django]: 
+        <a href="/media/vapeadores.jpg">img</a>, 
+        <a href="/media/vapeadores-1.jpg">img</a> 
+      </li>
+      <li>Página tienda de bombillas led [<b>Web</b>, Django]: 
+        <a href="/media/leds.jpg">img</a>, 
+        <a href="/media/leds-1.jpg">img</a> 
+      </li>
+      <li>Página catálogo de raquetas [<b>Web</b>, Django]: 
+        <a href="/media/paddle.jpg">img</a>, 
+        <a href="/media/paddle-1.jpg">img</a> 
+      </li>
+      <li>Página tienda de calzados [<b>Web</b>, Django]: 
+        <a href="/media/calzados.jpg">img</a>, 
+        <a href="/media/calzados-1.jpg">img</a> 
+      </li>
+      <li>Página portafolio constructora [<b>Web</b>, Django]: 
+        <a href="/media/constructora.jpg">img</a>, 
+        <a href="/media/constructora-1.jpg">img</a> 
+      </li>
+      <li>Página tienda colorantes alimentarios [<b>Web</b>, Django]: 
+        <a href="/media/colorantes.jpg">img</a>, 
+        <a href="/media/colorantes-1.jpg">img</a> 
+      </li>
+      <li>Página catálogo soportes digitales [<b>Web</b>, Django]
+        <a href="/media/soportes-digitales.jpg">img</a>, 
+        <a href="/media/soportes-digitales-1.jpg">img</a> 
+      </li>
+      <li>Página empresa prevención de incendios [<b>Web</b>, Django]: 
+        <a href="/media/incendios.jpg">img</a>, 
+        <a href="/media/incendios-2.jpg">img</a> 
+      </li>
+      <li>Página gestoría y directorio de empresas [<b>Web</b>, Django]
+        <a href="/media/gestoria.jpg">img</a>,
+        <a href="/media/fidelity.jpg">img</a>
+      </li>
+      <li>Página clínica de otorrinolaringología [<b>Web</b>, Django]: 
+        <a href="/media/instituto.jpg">img</a>, 
+        <a href="/media/instituto-1.jpg">img</a> 
+      </li>
     </ul>
     <h3>2013</h3>
   </div>
 
   <div class="year-section">
     <ul>
-      <li>Página tienda para marca de calzados [<b>Web</b>, Django]: 
-        <a href="/media/calzados.jpg">jpg</a>, 
-        <a href="/media/calzados-1.jpg">jpg</a> 
-      </li>
-      <li>Página tienda de colorantes alimentarios [<b>Web</b>, Django]: 
-        <a href="/media/colorantes.jpg">jpg</a>, 
-        <a href="/media/colorantes-1.jpg">jpg</a> 
-      </li>
-      <li>Página catálogo de soportes digitales [<b>Web</b>, Django]
-        <a href="/media/soportes-digitales.jpg">jpg</a>, 
-        <a href="/media/soportes-digitales-1.jpg">jpg</a> 
-      </li>
-      <li>Página portafolio de constructora [<b>Web</b>, Django]: 
-        <a href="/media/constructora.jpg">jpg</a>, 
-        <a href="/media/constructora-1.jpg">jpg</a> 
-      </li>
-      <li>Página empresa prevención de incendios [<b>Web</b>, Django]: 
-        <a href="/media/incendios.jpg">jpg</a>, 
-        <a href="/media/incendios-2.jpg">jpg</a> 
-      </li>
-      <li>Página gestoría y directorio de empresas [<b>Web</b>, Django]
-        <a href="/media/gestoria.jpg">jpg</a>,
-        <a href="/media/fidelity.jpg">jpg</a>
-      </li>
-      <li>Página clínica de otorrinolaringología [<b>Web</b>, Django]: 
-        <a href="/media/instituto.jpg">jpg</a>, 
-        <a href="/media/instituto-1.jpg">jpg</a> 
-      </li>
       <li>Página escuela de yoga y pilates [<b>Web</b>, Wordpress]: 
         <a href="https://web.archive.org/web/20141221111047/http://pilatesyogazaragoza.com/">archive</a>
       </li>
@@ -459,21 +480,24 @@
       <li>Pythoneando (Aprendiendo Python 2) [<b>Docs</b>, Python]:
         <a href="https://github.com/hektorprofe/aprendiendo-python-2">repo</a>
       </li>
-      <li>Migdc CMS: Mi Gestor de Contenidos [<b>Web</b>, PHP, SQLite]:
+      <li>Migdc CMS: Mi Gestor de Contenidos [<b>Web</b>, PHP]:
+        <a href="/media/migdc.gif">demo</a>,
         <a href="https://github.com/hcosta/migdc-cms">repo</a>
       </li>
       <li>Simulador Primitiva [<b>Desktop</b>, Python]:
+        <a href="/media/primitiva.gif">demo</a>,
         <a href="https://github.com/hcosta/primitiva-python">repo</a>
       </li>
     </ul>
-    <h3>2012</h3>
+    <!-- <h3>2012</h3> -->
   </div>
 
   <div class="year-section">
-    <ul>
+    <ul class="no-top-margin">
       <li>XinXat - Treball de síntesis [<b>Web</b>, PHP, Java]:
-        <a href="https://web.archive.org/web/20141218132920/http://xinxat.com/en">archive</a>
-      </li> 
+        <a href="/media/xinxat.jpg">img</a>,
+        <a href="/media/xinxat-1.jpg">img</a>
+      </li>
       <li>Página para grupo de música [<b>Web</b>, PHP]:
         <a href="https://web.archive.org/web/20110701170820/http://www.suiteofficial.net/">archive</a>
       </li>
@@ -485,6 +509,7 @@
         <a href="https://github.com/hcosta/manga-downloader">repo</a>
       </li>
       <li>XML2PHP-Form [<b>Module</b>, PHP]:
+        <a href="/media/xml2form.png">img</a>,
         <a href="https://github.com/hcosta/xml2php-form">repo</a>
       </li>
     </ul>
@@ -494,29 +519,31 @@
   <div class="year-section">
     <ul>
       <li>MySeriesList - Treball de síntesis [<b>Web</b>, PHP, Docs]:
-        <a href="https://web.archive.org/web/20140115070646/http://myserieslist.com/">archive</a>
+        <a href="/media/myserieslist.jpg">img</a>,
+        <a href="/media/myserieslist-1.jpg">img</a>,
+        <a href="/media/myserieslist-2.jpg">img</a>
       </li>
       <li>Servei control d'accesos [<b>Software</b>, PHP, Delphi]:
-        <a href="/media/accesos-aec.png">png</a>,
-        <a href="/media/accesos-aec-2.png">png</a>
+        <a href="/media/accesos-aec.png">img</a>,
+        <a href="/media/accesos-aec-2.png">img</a>
       </li>
       <li>Servei sondes temperatura [<b>Software</b>, PHP, Visual Basic]:
-        <a href="/media/temperaturas-aec-3.png">png</a>,
-        <a href="/media/temperaturas-aec.png">png</a>,
-        <a href="/media/temperaturas-aec-2.png">png</a>
+        <a href="/media/temperaturas-aec-3.png">img</a>,
+        <a href="/media/temperaturas-aec.png">img</a>,
+        <a href="/media/temperaturas-aec-2.png">img</a>
       </li>
       <!-- <li>Proyecto de geolocalización de vehículos [<b>Docs</b>, Testing]</li> -->
       <li>Sistemes de Gestió de Bases de Dades - Treball de recerca [<b>PDF</b>]:
         <a href="/media/sgbd-hcg-2010.pdf">pdf</a>
       </li>
     </ul>
-    <h3>2010</h3>
+    <!-- <h3>2010</h3> -->
   </div>
 
   <div class="year-section">
-    <ul>
+    <ul class="no-top-margin">
       <li>Yasps (Yet Another Stupid Polling System) [<b>Web</b>, PHP]:
-        <a href="/media/yasps.png">png</a>
+        <a href="/media/yasps.png">img</a>
       </li>
       <li>Página para molino y tienda de aceite [<b>Web</b>, PHP, Angular.js]:
         <a href="https://web.archive.org/web/20111123143049/http://www.art-oli.com/">archive</a>
@@ -538,93 +565,156 @@
 <!-- Lightbox -->
 <div id="lightbox">
   <span onclick="closeLightbox()">×</span> 
-  <div id="lightbox-content"> </div> 
+  <div id="lightbox-content"></div>
+  <div class="lightbox-nav nav-left" onclick="showPrev()">‹</div>
+  <div class="lightbox-nav nav-right" onclick="showNext()">›</div>
 </div>
 
 <script>
-function openLightbox(url) {
-  const ext = url.split('.').pop().toLowerCase();
-  const container = document.getElementById("lightbox-content");
-  container.innerHTML = "";
+  let lightboxItems = []; // array de URLs del grupo actual
+  let currentIndex = 0;
+  
+  function openLightbox(url, group = []) {
+    lightboxItems = group.length > 0 ? group : [url];
+    currentIndex = lightboxItems.indexOf(url);
+    loadLightboxItem(currentIndex);
+    document.getElementById("lightbox").style.display = "flex";
+  }
+  
+  function loadLightboxItem(index) {
+    if (!lightboxItems[index]) return;
+    const url = lightboxItems[index];
+    const ext = url.split('.').pop().toLowerCase();
+    const container = document.getElementById("lightbox-content");
+    container.innerHTML = "";
 
-  let el;
-  if (["jpg", "jpeg", "png", "gif", "webp"].includes(ext)) {
-    el = document.createElement("img");
-    el.src = url;
-    el.style = "max-width:100%; max-height:100%; border-radius:10px; object-fit:contain;";
-  } else if (["mp4", "webm", "ogg"].includes(ext)) {
-    el = document.createElement("video");
-    el.src = url;
-    el.controls = true;
-    el.autoplay = true;
-    el.style = "max-width:100%; max-height:100%; border-radius:10px; object-fit:contain;";
-  } else if (["pdf"].includes(ext)) {
-    el = document.createElement("iframe");
-    el.src = url;
-    el.style = "width:80vw; height:80vh; border:none; border-radius:10px;object-fit:contain;";
-  } else {
-    el = document.createElement("p");
-    el.textContent = "Tipo de archivo no compatible para vista previa.";
-    el.style = "color:white";
+    let el;
+    if (["jpg", "jpeg", "png", "gif", "webp"].includes(ext)) {
+      el = document.createElement("img");
+      el.src = url;
+      el.style = "max-width:100%; max-height:80vh; border-radius:10px; object-fit:contain;";
+    } else if (["mp4", "webm", "ogg"].includes(ext)) {
+      el = document.createElement("video");
+      el.src = url;
+      el.controls = true;
+      el.autoplay = true;
+      el.style = "max-width:100%; max-height:80vh; border-radius:10px; object-fit:contain;";
+    } else if (["pdf"].includes(ext)) {
+      el = document.createElement("iframe");
+      el.src = url;
+      el.style = "width:80vw; height:80vh; border:none; border-radius:10px;object-fit:contain;";
+    } else {
+      el = document.createElement("p");
+      el.textContent = "Tipo de archivo no compatible para vista previa.";
+      el.style = "color:white";
+    }
+
+    container.appendChild(el);
+
+    // Mostrar/ocultar navegación
+    const leftNav = document.querySelector(".nav-left");
+    const rightNav = document.querySelector(".nav-right");
+
+    if (currentIndex > 0) {
+      leftNav.style.display = "block";
+    } else {
+      leftNav.style.display = "none";
+    }
+
+    if (currentIndex < lightboxItems.length - 1) {
+      rightNav.style.display = "block";
+    } else {
+      rightNav.style.display = "none";
+    }
   }
 
-  container.appendChild(el);
-  document.getElementById("lightbox").style.display = "flex";
-}
-
-function closeLightbox() {
-  const content = document.getElementById("lightbox-content");
-
-  // Detener video si existe
-  const video = content.querySelector("video");
-  if (video) {
-    video.pause();
-    video.src = ""; // Reset src para forzar recarga
-    video.load();
+  function showNext() {
+    if (currentIndex < lightboxItems.length - 1) {
+      currentIndex++;
+      loadLightboxItem(currentIndex);
+    }
   }
+  
+  function showPrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      loadLightboxItem(currentIndex);
+    }
+  }
+  
+  function closeLightbox() {
+    const content = document.getElementById("lightbox-content");
+    const video = content.querySelector("video");
+    if (video) {
+      video.pause();
+      video.src = "";
+      video.load();
+    }
+    content.innerHTML = "";
+    document.getElementById("lightbox").style.display = "none";
+    lightboxItems = [];
+    currentIndex = 0;
+  }
+  
+  // Escape para cerrar
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+  });
+  
+  // Detecta clics fuera del contenido
+  document.getElementById("lightbox").addEventListener("click", function(e) {
+    if (e.target === this) closeLightbox();
+  });
+  
+  // Detectar grupos por <li>
+  document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('a[href]');
+    const mediaExts = ['jpg','jpeg','png','gif','webp','mp4','webm','ogg','pdf'];
 
-  // Eliminar todo el contenido del lightbox
-  content.innerHTML = "";
-  document.getElementById("lightbox").style.display = "none";
-}
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (!href) return;
 
-// Detecta clics fuera del contenido
-document.getElementById("lightbox").addEventListener("click", function(e) {
-  if (e.target === this) closeLightbox();
-});
+        // Detectar si es medio (imagen, video, pdf)
+        const extMatch = href.match(/\.(\w{3,4})$/i);
+        const isMedia = extMatch && mediaExts.includes(extMatch[1].toLowerCase());
 
-// Cierra con Escape
-document.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") closeLightbox();
-});
+        if (isMedia) {
+          e.preventDefault();
 
-// Auto-interceptar enlaces a medios
-document.addEventListener("DOMContentLoaded", function() {
-  const links = document.querySelectorAll('a[href]');
-  const mediaExts = ['jpg','jpeg','png','gif','webp','mp4','webm','ogg'];
+          // Agrupar por <li>
+          const li = this.closest("li");
+          if (!li) return;
 
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      const extMatch = href.match(/\.(\w{3,4})$/i);
+          const group = [...li.querySelectorAll("a[href]")]
+            .map(a => a.getAttribute('href'))
+            .filter(h => {
+              if (!h) return false;
+              const hExt = h.split('.').pop().toLowerCase();
+              return mediaExts.includes(hExt);
+            });
 
-      if (extMatch && mediaExts.includes(extMatch[1].toLowerCase())) {
-        // Es un archivo de medios: usa lightbox
-        e.preventDefault();
-        openLightbox(href);
-      } else {
-        // No es un medio, dejarlo abrir en nueva pestaña
-        const hasTargetBlank = this.getAttribute('target') === '_blank';
-        if (!hasTargetBlank) {
-          e.preventDefault(); // Evita comportamiento por defecto
-          window.open(href, '_blank'); // Forza nueva pestaña
+          openLightbox(href, group);
+          return;
         }
-        // Si tiene target="_blank", no tocamos nada (deja que lo maneje el navegador)
-      }
+
+        // Detectar si es un enlace externo (otro dominio)
+        const isExternal = href.startsWith("http://") || href.startsWith("https://");
+
+        if (isExternal) {
+          e.preventDefault();
+          window.open(href, "_blank");
+          return;
+        }
+
+        // Si no es externo ni medio, dejarlo pasar como está
+      });
     });
   });
-});
-</script>
+  </script>
 
 </body>
 </html>
