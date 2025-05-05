@@ -1,0 +1,16 @@
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: .75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+  
+#theme-toggle svg {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}

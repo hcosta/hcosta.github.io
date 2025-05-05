@@ -1,0 +1,144 @@
+body {
+    font-family: monospace;
+    font-size: 115%;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background: #1d1d1d;
+    color: #d4d4d4;
+  }
+  
+  @media (max-width: 950px) {
+    header img {
+        display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 100%;
+    }
+    .nav-bar {
+      padding: 0.5rem;
+    }
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  nav[aria-label="Menú principal"] .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0.5rem;
+    list-style: none;
+    border-top: 1px solid #3399ff;
+    border-bottom: 1px solid #3399ff;
+    margin-bottom: 1.25rem;
+  }
+  
+  .nav-bar li {
+    display: inline;
+  }
+  
+  .nav-bar a {
+    color: #3399ff !important;
+    text-decoration: none;
+  }
+  
+  .nav-bar a:hover {
+    color: #6fb7ff !important;
+    text-decoration: underline;
+  }
+  
+  .nav-bar a[aria-current="page"] {
+    font-weight: bold;
+  }
+  
+  section#achievements {
+    margin-bottom: 2rem;
+  }
+  
+  #achievements-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .achievements-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .achievements-list {
+    list-style-type: square;
+    padding-left: 1.2rem;
+  }
+  
+  .achievements-list li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .achievements-list li p {
+    margin: 0.25rem 0 0.75rem 0;
+  }
+  
+  a {
+    color: #3399ff !important;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #6fb7ff !important;
+    text-decoration: underline;
+  }
+  
+  header img {
+    float: right;
+    margin-top: 1rem;
+    margin-left: 1.25rem;
+    border-radius:5px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    margin: 0;
+    position: fixed;
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+  
+  .footer-links li {
+    background: #1d1d1d;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    margin-bottom: 0rem;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-links a svg {
+    margin-left:.5rem;
+    margin-top:.5rem;
+    fill: currentColor;
+  }
+  
+  .quote { background-color: #4e4e4e; padding:1rem;display:block;margin-top:0;text-align: center;color:#d4d4d4;font-size: 110%;}
+  h3::after { content: ""; position: absolute; bottom: 0; left: 0; height: 2px; width: 100%; background: linear-gradient(to right, rgb(179, 179, 179), rgba(253, 253, 253, 0)); z-index:0;}
+
+  button#theme-toggle {
+    background: #1d1d1d;
+    border-radius:25px;
+  }
+
+  .marked {
+    background-color: #3ab7ffde;
+    color:#131313
+  }

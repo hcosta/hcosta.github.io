@@ -1,0 +1,11 @@
+/* body {max-width: 785px;} */
+h3 {  clear: left; float: left; margin: 0; margin-top: -1.575rem; width: 100%; max-width: 800px; position: relative; z-index:-1} 
+.year-section > ul { margin:0; padding-left:75px;margin-top:5px;z-index:-1;}
+ul.no-top-margin { margin-top:0;}
+li { padding-bottom:0rem;z-index:1;}
+#lightbox{display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999; overflow: auto; }
+#lightbox span {position: absolute; top: 0rem; right: 2.25rem; color: white; font-size: 2.65rem; cursor: pointer; z-index: 10000;}
+#lightbox-content { max-width: 80vw; max-height: 80vh; box-shadow: 0 0 20px rgba(0,0,0,0.5); border-radius: 10px; display: flex; justify-content: center; align-items: center; background: #000;}
+.lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); font-size: 3rem; color: white; cursor: pointer; user-select: none; z-index: 10000; }
+.nav-left { left: 1.75rem; }
+.nav-right { right: 1.75rem; }
