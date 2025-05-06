@@ -21,6 +21,24 @@
 
   <header>
     <img src="/media/pirata.png" title="Saludos, eterno aprendiz." alt="Imagen de Héctor Costa Guzmán" width="140" height="140">
+    <button type='button' id="theme-toggle" aria-label="Cambiar tema">
+      <svg id="icon-sun" width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 3V0H9V3H7Z" fill="#ffd400"/>
+        <path d="M9 13V16H7V13H9Z" fill="#ffd400"/>
+        <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="#ffd400"/>
+        <path d="M0 9H3V7H0V9Z" fill="#ffd400"/>
+        <path d="M16 7H13V9H16V7Z" fill="#ffd400"/>
+        <path d="M3.75735 5.17157L1.63603 3.05025L3.05025 1.63603L5.17157 3.75735L3.75735 5.17157Z" fill="#ffd400"/>
+        <path d="M12.2426 10.8284L14.364 12.9497L12.9497 14.364L10.8284 12.2426L12.2426 10.8284Z" fill="#ffd400"/>
+        <path d="M3.05025 14.364L5.17157 12.2426L3.75735 10.8284L1.63603 12.9498L3.05025 14.364Z" fill="#ffd400"/>
+        <path d="M12.9497 1.63604L10.8284 3.75736L12.2426 5.17158L14.364 3.05026L12.9497 1.63604Z" fill="#ffd400"/>
+      </svg>
+  
+      <svg width="800px" height="800px" id="icon-moon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 8.00002C0 4.75562 1.93132 1.9623 4.70701 0.707031L5.65436 1.65438C5.2352 2.51383 5 3.47946 5 4.50002C5 8.08987 7.91015 11 11.5 11C12.5206 11 13.4862 10.7648 14.3456 10.3457L15.293 11.293C14.0377 14.0687 11.2444 16 8 16C3.58172 16 0 12.4183 0 8.00002Z" fill="#1d1d1d"/>
+        <path d="M11.5 7.00003L9 4.50003L11.5 2.00003L14 4.50003L11.5 7.00003Z" fill="#1d1d1d"/>
+        </svg>
+    </button>
     <h2>Website de Héctor Costa Guzmán</h2>
     <nav aria-label="Menú principal">
       <ul class="nav-bar">
@@ -32,79 +50,83 @@
     </nav>
   </header>
 
-  <button type='button' id="theme-toggle" aria-label="Cambiar tema">
-    <svg id="icon-sun" width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M7 3V0H9V3H7Z" fill="#ffd400"/>
-      <path d="M9 13V16H7V13H9Z" fill="#ffd400"/>
-      <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="#ffd400"/>
-      <path d="M0 9H3V7H0V9Z" fill="#ffd400"/>
-      <path d="M16 7H13V9H16V7Z" fill="#ffd400"/>
-      <path d="M3.75735 5.17157L1.63603 3.05025L3.05025 1.63603L5.17157 3.75735L3.75735 5.17157Z" fill="#ffd400"/>
-      <path d="M12.2426 10.8284L14.364 12.9497L12.9497 14.364L10.8284 12.2426L12.2426 10.8284Z" fill="#ffd400"/>
-      <path d="M3.05025 14.364L5.17157 12.2426L3.75735 10.8284L1.63603 12.9498L3.05025 14.364Z" fill="#ffd400"/>
-      <path d="M12.9497 1.63604L10.8284 3.75736L12.2426 5.17158L14.364 3.05026L12.9497 1.63604Z" fill="#ffd400"/>
-      </svg>
+  <p>Apasionado por enseñar programación, crear videojuegos y aplicaciones. Desde 2010 aprendo, construyo, comparto... y ahora también ladro.</p>
 
-    <svg width="800px" height="800px" id="icon-moon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 8.00002C0 4.75562 1.93132 1.9623 4.70701 0.707031L5.65436 1.65438C5.2352 2.51383 5 3.47946 5 4.50002C5 8.08987 7.91015 11 11.5 11C12.5206 11 13.4862 10.7648 14.3456 10.3457L15.293 11.293C14.0377 14.0687 11.2444 16 8 16C3.58172 16 0 12.4183 0 8.00002Z" fill="#1d1d1d"/>
-      <path d="M11.5 7.00003L9 4.50003L11.5 2.00003L14 4.50003L11.5 7.00003Z" fill="#1d1d1d"/>
-      </svg>
-  </button>
+  <h2 class="achievements-subtitle">Proyectos que llegarán un futuro próximo</h2>
 
-  <p>Apasionado por enseñar programación, crear videojuegos y aplicaciones. Desde 2010 construyo, comparto y aprendo: y ahora también ladro al mundo.</p>
+  <section id="now" aria-labelledby="now-title">
+    <ul class="achievements-list">
+      <li>
+        <strong>🎙️ Preparar el podcast de crítica social “Jodida Realidad”</strong>
+        <p>Estoy ultimando los detalles para lanzar un podcast muy personal, un espacio donde hablaré sin filtros, con un enfoque crudo, reflexivo y jazz de fondo. Somos muchos los que sentimos que esta sociedad no funciona bien, pero también nos hemos resignado a que no hay nada que hacer. Quizá podamos cambiar algo si empezamos a hablar más sobre ello.</p>
+      </li>
+      <li>
+        <strong>🕹️ Empezar el “Reto 101”: una colección de videojuegos</strong>
+        <p>Inspirado por el programador <i>Emanuele Feronato</i>, me he propuesto desarrollar 101 prototipos de videojuegos con Godot, explorando mecánicas clásicas, ideas arcade y estilos visuales retro con una estética oscura y degradados intensos. Es un proyecto personal a medio plazo, pensado para divertirme, aprender y quizá inspirar a otros, creando todos los recursos por mí mismo.</p>
+      </li>
+      <li>
+        <strong>🧠 Crear un sistema educativo offline y DRM-Free</strong>
+        <p>Llevo tiempo diseñando una herramienta que permita montar cursos interactivos en un único archivo portable y multiplataforma, sin necesidad de conexión a Internet ni depender de plataformas externas. La idea es ofrecer una alternativa ética y accesible: contenidos sin DRM, con recursos bajo licencias libres (CC0), que el estudiante pueda conservar para siempre. Surge de mi experiencia como alumno y profesor en plataformas como Udemy o Teachable, pero sobre todo de una convicción personal: el conocimiento no debería estar encerrado tras muros digitales ni exigir conexión permanente.</p>
+      </li>
+    </ul>
+  </section>
 
-  <h2 class="achievements-subtitle">Esto es lo que he conseguido a lo largo de los años:</h2>
+  <h2 class="achievements-subtitle">Proyectos en los que sigo trabajando hoy</h2>
 
   <section id="achievements" aria-labelledby="achievements-title">
     <ul class="achievements-list">
-      <!-- <li>
-        <strong>🎙️ Producir el podcast de crítica social “Jodida Realidad”</strong>
-        <p>Porque hemos llegado a un punto que si no digo lo que pienso voy a rebentar. En <a href="/podcast">mi  podcast</a> hablo sin pelos en la lengua sobre cultura, tecnología y sociedad, con un estilo directo y crudo que invita a reflexionar sobre temas que nos afectan a todos... con jazz de fondo.</p>
-      </li> -->
       <li>
         <strong>🎓 Formar nuevos programadores y desarrolladores hispanos</strong>
         <p>Fruto de mi pasión por enseñar y compartir lo que aprendo, he creado <a href="/timeline/?mark=curso">más de 30 cursos</a> sobre programación, desarrollo web y videojuegos bajo mi marca personal <i>Hektor Profe</i>, algunos de ellos disponibles en la plataforma <a href="https://www.udemy.com/user/hctorcostaguzmn/" target="_blank">Udemy</a>, donde he tenido el privilegio de llegar a más de 230,000 estudiantes y recibir 41,000 reviews positivas.</p>
-
-      </li>
-      <li>
-        <strong>🌐 Digitalizar todo tipo de negocios reales con webs a medida</strong>
-        <p>He creado <a href="/timeline/?mark=página">más de 20 sitios web</a> para empresas, academias y startups, utilizando tecnologías como Wordpress, Django y Nuxt, lo que me ha permitido ver de cerca las necesidades del mercado digital y ofrecer soluciones adaptadas al presupuesto de cada cliente.</p>
       </li>
       <li>
         <strong>🎮 Crear prototipos de videojuegos como material didáctico</strong>
-        <p>Me apasiona aprender y enseñar a través de los videojuegos. He programado <a href="/timeline/?mark=videojuego">más de 20 prototipos</a> en Godot, Unity y GameMaker: Studio, algunos como proyectos personales y otros para enseñar a los estudiantes a dominar las técnicas y mecánicas esenciales del desarrollo de videojuegos.</p>
+        <p>Me apasiona aprender y enseñar a través de los videojuegos. He programado <a href="/timeline/?mark=videojuego">más de 20 prototipos</a> en Godot, Unity y GameMaker: Studio, algunos como proyectos personales y otros para enseñar a los estudiantes a dominar las técnicas y mecánicas esenciales del desarrollo de videojuegos. Cada uno representa una oportunidad para experimentar, fallar rápido y enseñar con un enfoque lúdico.</p>
       </li>
       <li>
+        <strong>🌐 Digitalizar todo tipo de negocios reales con webs a medida</strong>
+        <p>He creado <a href="/timeline/?mark=página">más de 20 sitios web</a> para empresas, academias y startups, utilizando tecnologías como Wordpress, Django y Nuxt, lo que me ha permitido ver de cerca las necesidades del mercado digital y ofrecer soluciones adaptadas al presupuesto de cada cliente. Siempre busco el equilibrio entre diseño funcional, rendimiento y facilidad de mantenimiento.</p>
+      </li>
+    </ul>
+  </section> 
+
+  <h2 class="achievements-subtitle">Proyectos terminados que dejaron huella</h2>
+
+  <section id="past" aria-labelledby="past-title">
+    <ul class="achievements-list">
+      <li>
         <strong>📝 Divulgar tecnología escribiendo un sinfín de artículos</strong>
-        <p>Desde siempre he creído que compartir conocimiento es clave, por eso he escrito <a href="https://hektorprofe.github.io/" target="_blank">más de 500 artículos y tutoriales</a>, donde trato de desglosar conceptos complejos y ofrecer recursos útiles a quienes están comenzando o profundizando en el desarrollo de software.</p>
+        <p>Desde siempre he creído que compartir conocimiento es clave, por eso he escrito <a href="https://hektorprofe.github.io/" target="_blank">más de 500 artículos y tutoriales</a>, donde trato de desglosar conceptos complejos y ofrecer recursos útiles a quienes están comenzando o profundizando en el desarrollo de software. Hoy, con el auge de la IA, mi archivo ha perdido mucha presencia, pero ahí queda para la posteridad.</p>
+      </li>
+      <li>
+        <strong>🖥️ Investigar programación gráfica creando un motor 3D</strong>
+        <p>Mi curiosidad me llevó a documentar el proceso de creación de un <a href="https://github.com/hcosta/cpu-3d-graphics" target="_blank">motor de renderizado 3D</a> desde cero utilizando únicamente la CPU (C++, SDL2, Dear ImGui), para entender cómo gestionar las proyecciones, la rasterización y buffers en tiempo real, adentrándome en lo más esencial de la programación gráfica desde sus propios cimientos.</p>
       </li>
       <li>
         <strong>🛡️ Liderar una hermandad de 60 jugadores en WoW Classic</strong>
-        <p>Para algunos será trivial, pero gestionar una <a href="https://www.youtube.com/watch?v=VMJo8vKdqYs&ab_channel=Hector" target="_blank">guild semi-hardcore</a> de 60 jugadores en WoW Classic fue uno de los mayores retos que jamás he experimentado. Esto me permitió mejorar mis habilidades de liderazgo, organización y trabajo en equipo en un entorno de juego colaborativo pero también extremadamente competitivo y estresante, con rencillas constantes entre miembros.</p>
-      </li>
-      <li>
-        <strong>📱 Desarrollar “Sopamanía” para dispositivos Android</strong>
-        <p>Mi primer y único videojuego profesional hasta la fecha fue <a href="https://apkpure.com/word-search-puzzle-soupmania/com.sopamania.game" target="_blank">Sopamanía</a>. Un juego de sopas de letras que incluía tres modos (Zen, Classic y Challenge) con más de 100 paquetes temáticos. Siempre intenté ofrecer una experiencia de usuario agradable y optimizada en todos los aspectos. Consiguió 10,000 descargas antes de ser eliminado de la tienda debido a una brecha de seguridad del motor GameMaker: Studio en la exportación a Android.</p>
+        <p>Aunque algunos lo considerarán una trivialidad y nada que ver, gestionar una <a href="https://www.youtube.com/watch?v=VMJo8vKdqYs&ab_channel=Hector" target="_blank">guild semi-hardcore</a> de 60 jugadores en WoW Classic fue uno de los mayores retos que jamás he afrontado. Esto me permitió mejorar mis habilidades de liderazgo, organización y trabajo en equipo en un entorno de juego colaborativo pero también muy competitivo y con fricciones entre miembros.</p>
       </li>
       <li>
         <strong>📚 Crear “Manga Phoenix App”, lector multiplataforma</strong>
         <p>En 2014 leer manga en Android era arriesgarse a descargar malware por todas partes, por eso creé mi propio lector basado en un sistema de web scrapping automatizado. Para mi sorpresa <a href="https://web.archive.org/web/20160314111349/http://mangaphoenixapp.com/en/" target="_blank">Manga Phoenix</a> se viralizó en la Play Store, logrando más de 500,000 descargas y ser top 1 en la categoría <i>Comics</i> de varias regiones  gracias a su diseño intuitivo y funciones offline.</p>
       </li>
       <li>
-        <strong>🖥️ Investigar programación gráfica creando un motor 3D</strong>
-        <p>Mi curiosidad me llevó a documentar el proceso de creación de un <a href="https://github.com/hcosta/cpu-3d-graphics" target="_blank">motor de renderizado 3D</a> desde cero (C++, SDL2, Dear ImGui), para entender cómo gestionar las proyecciones, la rasterización y buffers en tiempo real, adentrándome en la programación gráfica desde sus propios cimientos.</p>
+        <strong>📱 Desarrollar “Sopamanía” para dispositivos Android</strong>
+        <p>Mi primer y único videojuego profesional hasta la fecha fue <a href="https://apkpure.com/word-search-puzzle-soupmania/com.sopamania.game" target="_blank">Sopamanía</a>. Un juego de sopas de letras que incluía tres modos (Zen, Classic y Challenge) con más de 100 paquetes temáticos. Siempre intenté ofrecer una experiencia de usuario agradable y optimizada en todos los aspectos. Consiguió 10,000 descargas antes de ser eliminado de la tienda debido a una brecha de seguridad del motor GameMaker: Studio en la exportación a Android.</p>
       </li>
     </ul>
   </section> 
 
   <footer>
     <ul class="footer-links">
-      <li><a href="https://forms.gle/hcdMHGYkHPvvFJe87" target="_blank" title="Contacto">
-          <svg hwidth="23" height="23" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g> <path class="st0" d="M440.917,67.925H71.083C31.827,67.925,0,99.752,0,139.008v233.984c0,39.256,31.827,71.083,71.083,71.083 h369.834c39.255,0,71.083-31.827,71.083-71.083V139.008C512,99.752,480.172,67.925,440.917,67.925z M178.166,321.72l-99.54,84.92 c-7.021,5.992-17.576,5.159-23.567-1.869c-5.992-7.021-5.159-17.576,1.87-23.567l99.54-84.92c7.02-5.992,17.574-5.159,23.566,1.87 C186.027,305.174,185.194,315.729,178.166,321.72z M256,289.436c-13.314-0.033-26.22-4.457-36.31-13.183l0.008,0.008l-0.032-0.024 c0.008,0.008,0.017,0.008,0.024,0.016L66.962,143.694c-6.98-6.058-7.723-16.612-1.674-23.583c6.057-6.98,16.612-7.723,23.582-1.674 l152.771,132.592c3.265,2.906,8.645,5.004,14.359,4.971c5.706,0.017,10.995-2.024,14.44-5.028l0.074-0.065l152.615-132.469 c6.971-6.049,17.526-5.306,23.583,1.674c6.048,6.97,5.306,17.525-1.674,23.583l-152.77,132.599 C282.211,284.929,269.322,289.419,256,289.436z M456.948,404.771c-5.992,7.028-16.547,7.861-23.566,1.869l-99.54-84.92 c-7.028-5.992-7.861-16.546-1.869-23.566c5.991-7.029,16.546-7.861,23.566-1.87l99.54,84.92 C462.107,387.195,462.94,397.75,456.948,404.771z"/> </g> </svg>
-        </a></li>
-      <li><a href="https://github.com/hcosta" target="_blank" title="GitHub">
-          <svg width="23" height="23" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g transform="translate(-140.000000, -7559.000000)" fill="currentColor"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"> </path> </g> </g> </g> </svg>
-        </a></li>
+        <li><a href="https://forms.gle/hcdMHGYkHPvvFJe87" target="_blank" title="Contacto">
+            <svg hwidth="23" height="23" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g> <path class="st0" d="M440.917,67.925H71.083C31.827,67.925,0,99.752,0,139.008v233.984c0,39.256,31.827,71.083,71.083,71.083 h369.834c39.255,0,71.083-31.827,71.083-71.083V139.008C512,99.752,480.172,67.925,440.917,67.925z M178.166,321.72l-99.54,84.92 c-7.021,5.992-17.576,5.159-23.567-1.869c-5.992-7.021-5.159-17.576,1.87-23.567l99.54-84.92c7.02-5.992,17.574-5.159,23.566,1.87 C186.027,305.174,185.194,315.729,178.166,321.72z M256,289.436c-13.314-0.033-26.22-4.457-36.31-13.183l0.008,0.008l-0.032-0.024 c0.008,0.008,0.017,0.008,0.024,0.016L66.962,143.694c-6.98-6.058-7.723-16.612-1.674-23.583c6.057-6.98,16.612-7.723,23.582-1.674 l152.771,132.592c3.265,2.906,8.645,5.004,14.359,4.971c5.706,0.017,10.995-2.024,14.44-5.028l0.074-0.065l152.615-132.469 c6.971-6.049,17.526-5.306,23.583,1.674c6.048,6.97,5.306,17.525-1.674,23.583l-152.77,132.599 C282.211,284.929,269.322,289.419,256,289.436z M456.948,404.771c-5.992,7.028-16.547,7.861-23.566,1.869l-99.54-84.92 c-7.028-5.992-7.861-16.546-1.869-23.566c5.991-7.029,16.546-7.861,23.566-1.87l99.54,84.92 C462.107,387.195,462.94,397.75,456.948,404.771z"/> </g> </svg>
+          </a>
+        </li><li>
+          <a href="https://github.com/hcosta" target="_blank" title="GitHub">
+            <svg width="23" height="23" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g transform="translate(-140.000000, -7559.000000)" fill="currentColor"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"> </path> </g> </g> </g> </svg>
+          </a>
+        </li>
     </ul>
   </footer>
 

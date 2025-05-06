@@ -1,6 +1,6 @@
 body {
-    font-family: monospace;
-    font-size: 115%;
+  font-family: 'Consolas', 'Menlo', 'Courier New', monospace;
+    font-size: 95%;
     line-height: 1.6;
     max-width: 800px;   
     margin: 0 auto;
@@ -58,8 +58,18 @@ body {
     font-weight: bold;
   }
   
-  section#achievements {
-    margin-bottom: 2rem;
+  section {
+    margin-top: 1.5em;
+    margin-bottom: 1.25rem;
+  }
+
+  section:last-of-type{
+    margin-bottom: 1.75rem;
+  }
+  
+  #achievements-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
   
   #achievements-title {
@@ -69,6 +79,8 @@ body {
 
   .achievements-subtitle {
     font-size: 1.2rem;
+    margin-top: 1.35rem;
+    border-bottom: 2px solid #1d1d1d;
   }
   
   .achievements-list {
@@ -115,11 +127,13 @@ body {
   
   .footer-links li {
     background: #fafafa;
-    display: block;
+    display: inline-block;
     width: 40px;
     height: 40px;
     border-radius: 25px;
     margin-bottom: 0rem;
+    margin:0;
+    padding:0;
   }
   
   .footer-links a {
@@ -134,7 +148,7 @@ body {
     fill: currentColor;
   }
   
-  .quote { background-color: lightgrey; padding:1rem;display:block;margin-top:0;text-align: center;color:#000;font-size: 110%;}
+  .quote { background-color: lightgrey; padding:1rem;display:block;margin-top:0;text-align: center;color:#000;font-size: 105%;}
   h3::after { content: ""; position: absolute; bottom: 0; left: 0; height: 2px; width: 100%; background: linear-gradient(to right, rgb(43, 43, 43), rgba(43, 43, 43, 0)); z-index:0;}
 
   button#theme-toggle {

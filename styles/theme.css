@@ -1,11 +1,10 @@
 #theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: .75rem;
+  float: left;
+  margin-right: .85rem;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.25rem 0;
   z-index: 1000;
 }
   
