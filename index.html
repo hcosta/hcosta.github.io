@@ -3,273 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Héctor Costa Guzmán | 10º Aniversario - La Evolución</title>
+    <title>MLVisual | El Arte de la Ingeniería de Incentivos</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #030a05;
+            --matrix-green: #00ff41; 
+            --dark-green: #003b00;
+        }
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background-color: #050505;
+            background-color: var(--bg);
             color: #ffffff;
             overflow-x: hidden;
         }
-        .code-font {
-            font-family: 'Fira+Code', monospace;
-        }
-        /* Animación sutil del brillo */
-        .glow-text {
-            text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        #canvas-container {
+        .code-font { font-family: 'Fira Code', monospace; }
+        
+        /* Efecto Scanlines (CRT) */
+        body::before {
+            content: " ";
+            display: block;
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            z-index: 100;
+            background-size: 100% 3px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* Glassmorphism Matrix */
+        .glass-panel {
+            background: rgba(0, 15, 5, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.05);
+        }
+
+        /* Animación LIDAR Matrix */
+        .lidar-scan {
+            position: absolute;
+            height: 1px;
             width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.6;
+            background: linear-gradient(90deg, transparent, var(--matrix-green), transparent);
+            opacity: 0.4;
+            animation: scan 6s linear infinite;
+            pointer-events: none;
+            z-index: 50;
         }
-        .fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
         }
-        .delay-100 { animation-delay: 0.2s; }
-        .delay-200 { animation-delay: 0.4s; }
-        .delay-300 { animation-delay: 0.6s; }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        /* Brillo de texto Digital */
+        .matrix-glow {
+            text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
         }
-        
-        /* Cursor parpadeante */
-        .cursor-blink {
+
+        .fade-in { animation: fadeIn 1.5s ease-out forwards; opacity: 0; }
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        /* Cursor de terminal */
+        .cursor {
             display: inline-block;
             width: 10px;
-            height: 20px;
-            background-color: #38bdf8;
-            animation: blink 1s infinite;
+            height: 1.1em;
+            background: var(--matrix-green);
+            margin-left: 5px;
+            animation: blink 1s steps(2, start) infinite;
             vertical-align: middle;
+            box-shadow: 0 0 10px var(--matrix-green);
         }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+        @keyframes blink { to { visibility: hidden; } }
+
+        /* Input Estilo Terminal */
+        input:-webkit-autofill {
+            -webkit-text-fill-color: var(--matrix-green) !important;
+            -webkit-box-shadow: 0 0 0 30px #001505 inset !important;
+        }
+        
+        input::placeholder {
+            color: rgba(0, 255, 65, 0.2);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center relative">
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
 
-    <!-- Fondo Animado (Red Neuronal) -->
-    <div id="canvas-container">
-        <canvas id="neuroCanvas"></canvas>
-    </div>
+    <div class="lidar-scan"></div>
 
-    <!-- Contenido Principal -->
-    <main class="container mx-auto px-4 z-10 relative max-w-6xl text-center">
+    <!-- Fondo de "Datos" -->
+    <canvas id="neuroCanvas" class="fixed top-0 left-0 w-full h-full -z-10 opacity-20"></canvas>
+
+    <main class="max-w-4xl w-full z-10">
         
-        <!-- Badge del Aniversario -->
-        <div class="fade-in-up mb-8 flex justify-center">
-            <div class="inline-flex items-center px-4 py-2 rounded-full glass-panel text-xs tracking-widest text-sky-300 uppercase border border-sky-900/30">
-                <span class="mr-2 text-lg">💎</span> 2016 - 2026
+        <!-- Status Header -->
+        <div class="fade-in mb-10">
+            <div class="inline-flex items-center gap-3 px-3 py-1 rounded border border-green-500/30 bg-green-950/20 text-[9px] tracking-[0.4em] text-green-400 uppercase font-bold">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                CORE: ACTIVE | RADAR: SEARCHING | V_2026
             </div>
         </div>
 
-        <!-- Título Principal -->
-        <h1 class="fade-in-up delay-100 text-3xl md:text-5xl font-bold mb-6 tracking-tight">
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">10 Años Enseñando.</span>
-            <span class="block mt-2 text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-500 glow-text">La Siguiente Evolución.</span>
-        </h1>
+        <!-- Hero Section -->
+        <section class="text-left mb-12">
+            <h1 class="fade-in text-4xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
+                <span class="text-green-900 block text-2xl md:text-3xl mb-2 font-mono uppercase tracking-widest">Orders are legacy.</span>
+                Diseña <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-100 matrix-glow">Incentivos IA.</span>
+            </h1>
+            
+            <p class="fade-in text-lg md:text-xl text-green-800/80 max-w-xl leading-relaxed">
+                Durante 18 años programé el "cómo". <br>
+                Ahora entreno el <span class="text-green-400 font-medium italic underline decoration-green-900">porqué</span>. <br>
+                <span class="code-font text-green-500 text-xs mt-6 block border-l border-green-500/50 pl-4 py-2 bg-green-500/5">
+                    [SYSTEM_LOG] <br>
+                    > Agent: PPO_Active <br>
+                    > Sensor: LIDAR_Scanning... <br>
+                    > Target: MLVisual
+                </span>
+            </p>
+        </section>
 
-        <!-- Subtítulo / Teaser -->
-        <p class="fade-in-up delay-200 text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            En 2016 aprendimos a escribir código. <br>
-            En 2023 aprendimos a hablar con las máquinas. <br>
-            <span class="text-white font-medium mt-4 block">Y en 2026, les enseñaremos a <span class="code-font text-sky-300">pensar</span>.</span>
-        </p>
-
-        <!-- Formulario de Captura -->
-        <div class="fade-in-up delay-300 w-full max-w-md mx-auto">
-            <div class="glass-panel p-1 rounded-xl shadow-2xl shadow-sky-900/20">
-                <!-- Añadido name='radarForm' para facilitar la selección -->
-                <form name="radarForm" class="flex flex-col md:flex-row gap-2">
+        <!-- Formulario -->
+        <div class="fade-in w-full max-w-lg">
+            <div class="glass-panel p-1 rounded">
+                <form name="radarForm" class="flex flex-col md:flex-row gap-1">
                     <input 
                         type="email" 
                         name="email" 
-                        id="emailInput"
-                        placeholder="tu@email.com" 
-                        class="flex-1 bg-transparent text-white placeholder-slate-500 px-4 py-3 rounded-lg focus:outline-none focus:bg-white/5 transition-colors code-font text-sm border border-transparent focus:border-sky-500/50"
+                        placeholder="EMAIL_REQUIRED" 
+                        class="flex-1 bg-black/60 text-green-400 px-6 py-4 rounded-sm focus:outline-none focus:bg-black/80 transition-all code-font text-sm uppercase tracking-widest border-none"
                         required
                     >
                     <button 
                         type="submit" 
-                        class="bg-sky-500 hover:bg-sky-400 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 flex items-center justify-center gap-2 group"
+                        class="bg-green-600 hover:bg-green-400 text-black font-black px-8 py-4 rounded-sm transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 group uppercase text-[10px] tracking-tighter shadow-[0_0_15px_rgba(0,255,65,0.3)]"
                     >
-                        <span>Únete a la lista</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        <span>Unirse al Radar</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"></path></svg>
                     </button>
                 </form>
             </div>
-            <p class="mt-4 text-xs text-slate-600 uppercase tracking-widest">
-                Aviso de Lanzamiento &bull; Cupón Udemy Anticipado  &bull; 2026
-            </p>
             
-            <!-- Mensaje de éxito oculto -->
-            <div id="successMessage" class="hidden mt-4 p-4 glass-panel rounded-lg border-green-500/30 text-green-400">
-                <p class="flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <span>¡Apuntado! Recibirás el descuento en tu correo.</span>
+            <!-- Metadata -->
+            <div class="flex justify-between mt-6 px-1">
+                <div class="text-[8px] text-green-900 uppercase tracking-[0.3em] font-mono">
+                    Node: Godot-RL &bull; Env: Python3.10 &bull; Deployment: ONNX
+                </div>
+                <div class="text-[8px] text-green-500/30 uppercase tracking-[0.3em] animate-pulse font-mono">
+                    Est. 2016_Rev. 2026
+                </div>
+            </div>
+
+            <!-- Mensajes -->
+            <div id="successMessage" class="hidden mt-8 p-6 glass-panel rounded text-green-400 text-center">
+                <p class="code-font text-sm tracking-tighter">
+                    [CONFIRMADO] Coordenadas guardadas. <br> 
+                    <span class="text-[10px] text-green-900 mt-2 block uppercase">Espera instrucciones en tu terminal.</span>
                 </p>
             </div>
-             <!-- Mensaje de error oculto -->
-             <div id="errorMessage" class="hidden mt-4 p-4 glass-panel rounded-lg border-red-500/30 text-red-400">
-                <p class="flex items-center justify-center gap-2">
-                    <span>Hubo un error. Inténtalo de nuevo.</span>
-                </p>
+            <div id="errorMessage" class="hidden mt-8 p-6 glass-panel rounded border-red-900 text-red-500 text-center">
+                <p class="code-font text-sm">CRITICAL_FAILURE: Sincronización fallida.</p>
             </div>
         </div>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="absolute bottom-6 w-full text-center z-10 fade-in-up delay-300">
-        <div class="code-font text-xs text-slate-600">
-            System.Init(<span class="text-sky-500">2026</span>); <span class="cursor-blink"></span>
+    <!-- Footer Terminal -->
+    <footer class="fixed bottom-6 right-8 z-10 hidden md:block">
+        <div class="code-font text-[9px] text-green-950 leading-tight text-right uppercase">
+            Sovereign_Dev_Protocol <br>
+            Auth: Hector_Costa <br>
+            Status: Training_Thought <span class="cursor"></span>
         </div>
     </footer>
 
     <script>
-        // --- CONFIGURACIÓN GOOGLE SHEETS ---
-        // URL oficial de tu Script de Google (Backend)
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwey15oT4ChFEj06FNlhYGe3zOpe7xRxIqp98yJL70zSghZ7TwsdvEz1bhAVB7Iz9Tc/exec';
 
-        // --- Animación de Red Neuronal (Canvas) ---
+        // --- Canvas Digital Rain / Neural ---
         const canvas = document.getElementById('neuroCanvas');
         const ctx = canvas.getContext('2d');
-        let width, height;
-        let particles = [];
-
-        // Configuración
-        const particleCount = 60; 
-        const connectionDistance = 150; 
-        const moveSpeed = 0.3;
+        let width, height, particles = [];
 
         function resize() {
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
         }
 
-        class Particle {
+        class DigitalNode {
             constructor() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * moveSpeed;
-                this.vy = (Math.random() - 0.5) * moveSpeed;
-                this.size = Math.random() * 2 + 1;
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
+                this.size = Math.random() * 1.5;
             }
-
             update() {
-                this.x += this.vx;
-                this.y += this.vy;
-
+                this.x += this.vx; this.y += this.vy;
                 if (this.x < 0 || this.x > width) this.vx *= -1;
                 if (this.y < 0 || this.y > height) this.vy *= -1;
             }
-
-            draw() {
-                ctx.fillStyle = 'rgba(56, 189, 248, 0.5)'; 
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
         }
 
-        function initParticles() {
-            particles = [];
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
+        function init() {
+            resize();
+            particles = Array.from({length: 50}, () => new DigitalNode());
         }
 
-        function animate() {
+        function draw() {
             ctx.clearRect(0, 0, width, height);
-            
-            for (let i = 0; i < particles.length; i++) {
-                let p = particles[i];
+            ctx.strokeStyle = 'rgba(0, 255, 65, 0.08)';
+            ctx.fillStyle = 'rgba(0, 255, 65, 0.2)';
+            ctx.lineWidth = 0.5;
+
+            particles.forEach((p, i) => {
                 p.update();
-                p.draw();
-
-                for (let j = i; j < particles.length; j++) {
-                    let p2 = particles[j];
-                    let dx = p.x - p2.x;
-                    let dy = p.y - p2.y;
-                    let distance = Math.sqrt(dx*dx + dy*dy);
-
-                    if (distance < connectionDistance) {
+                ctx.fillRect(p.x, p.y, p.size, p.size); // Puntos cuadrados (pixelados)
+                
+                particles.slice(i + 1).forEach(p2 => {
+                    const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < 180) {
                         ctx.beginPath();
-                        let opacity = 1 - (distance / connectionDistance);
-                        ctx.strokeStyle = `rgba(56, 189, 248, ${opacity * 0.2})`; 
-                        ctx.lineWidth = 1;
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
                         ctx.stroke();
                     }
-                }
-            }
-            requestAnimationFrame(animate);
+                });
+            });
+            requestAnimationFrame(draw);
         }
 
-        window.addEventListener('resize', () => {
-            resize();
-            initParticles();
-        });
+        window.addEventListener('resize', init);
+        init(); draw();
 
-        resize();
-        initParticles();
-        animate();
-
-        // --- Manejo del Formulario con Google Sheets ---
+        // --- Form Submission ---
         const form = document.forms['radarForm'];
         const successMsg = document.getElementById('successMessage');
         const errorMsg = document.getElementById('errorMessage');
         const btn = form.querySelector('button');
-        const originalBtnText = btn.innerHTML;
 
         form.addEventListener('submit', e => {
             e.preventDefault();
-            
-            // Estado de carga
-            btn.innerHTML = '<span class="animate-spin">↻</span> Guardando...';
-            btn.classList.add('opacity-75');
             btn.disabled = true;
-
-            // Envío de datos
+            btn.innerHTML = 'SYNCING...';
+            
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    // Éxito
                     form.classList.add('hidden');
                     successMsg.classList.remove('hidden');
-                    successMsg.classList.add('fade-in-up');
-                    console.log('Success!', response);
                 })
                 .catch(error => {
-                    // Error
-                    console.error('Error!', error.message);
-                    btn.innerHTML = originalBtnText;
-                    btn.classList.remove('opacity-75');
                     btn.disabled = false;
+                    btn.innerHTML = 'RETRY';
                     errorMsg.classList.remove('hidden');
                 });
         });
     </script>
 </body>
-
 </html>
