@@ -1,11 +1,50 @@
 /* body {max-width: 785px;} */
-h3 {  clear: left; float: left; margin: 0; margin-top: -1.575rem; width: 100%; max-width: 800px; position: relative; z-index:-1} 
-.year-section > ul { margin:0; padding-left:75px;margin-top:5px;z-index:-1;}
+:root {
+	--timeline-line: #7d8794;
+	--timeline-surface: rgba(127, 143, 160, 0.1);
+	--tag-text: #17202a;
+}
+
+h3 { clear: left; float: left; margin: 0; margin-top: -1.575rem; width: 100%; max-width: 800px; position: relative; z-index: -1; }
+.year-section > ul { margin: 0; padding-left: 75px; margin-top: 5px; z-index: -1; }
 ul.no-top-margin { margin-top:0;}
-li { padding-bottom:0rem;z-index:1;}
+li { padding-bottom: 0.35rem; z-index: 1; }
+.timeline-legend { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.45rem; margin: 0 0 1.3rem; padding: 0.65rem 0.8rem; border: 1px solid var(--timeline-line); border-radius: 8px; background: var(--timeline-surface); }
+.timeline-filter-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45rem; }
+.legend-title { margin-right: 0.25rem; font-weight: 700; }
+.category-tag { display: inline-block; width: fit-content; padding: 0.08rem 0.48rem; border-radius: 999px; color: var(--tag-text); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.68rem; font-weight: 800; line-height: 1.45; letter-spacing: 0.02em; white-space: nowrap; vertical-align: 0.08em; }
+.timeline-filter-list .category-tag { border: 2px solid transparent; cursor: pointer; }
+.timeline-filter-list .category-tag:hover, .timeline-filter-list .category-tag:focus-visible { filter: brightness(1.08); outline: 2px solid currentColor; outline-offset: 2px; }
+.timeline-filter-list .category-tag[aria-pressed="true"] { border-color: currentColor; box-shadow: 0 0 0 2px var(--timeline-surface); transform: translateY(-1px); }
+.timeline-filter-reset { padding: 0.08rem 0.5rem; border: 1px solid var(--timeline-line); border-radius: 4px; background: transparent; color: inherit; cursor: pointer; font: inherit; font-size: 0.68rem; }
+.timeline-filter-reset:hover:not(:disabled), .timeline-filter-reset:focus-visible { background: var(--timeline-surface); outline: 2px solid currentColor; outline-offset: 2px; }
+.timeline-filter-reset:disabled { cursor: default; opacity: 0.45; }
+.year-section[hidden] { display: none; }
+li[hidden] { display: none; }
+.year-section > ul > li > .category-tag { margin-right: 0.6rem; transform: translateY(-0.08em); }
+.technology-tag { display: inline-block; margin: 0 0.28rem 0 0.1rem; padding: 0.05rem 0.38rem; border: 1px solid var(--timeline-line); border-radius: 4px; color: inherit; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.68rem; line-height: 1.35; white-space: nowrap; vertical-align: 0.08em; }
+.timeline-action { display: inline-flex; align-items: center; justify-content: center; width: 1.75rem; height: 1.75rem; margin: 0 0.22rem 0 0.08rem; border: 1px solid var(--timeline-line); border-radius: 6px; background: var(--timeline-surface); vertical-align: middle; }
+.timeline-action:hover, .timeline-action:focus-visible { border-color: currentColor; background: var(--timeline-surface); text-decoration: none; transform: translateY(-1px); }
+.timeline-action svg { width: 1rem; height: 1rem; stroke-width: 2.2; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.category-curso { background: #f4b942; }
+.category-montaje { background: #f08a5d; }
+.category-soldadura { background: #e85d75; }
+.category-web { background: #67c587; }
+.category-modulo { background: #65b7d8; }
+.category-apuntes { background: #b39ddb; }
+.category-social { background: #f28cc4; }
+.category-videojuego { background: #8dd3c7; }
+.category-proyecto { background: #b8c2cc; }
 #lightbox{display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999; overflow: auto; }
 #lightbox span {position: absolute; top: 0rem; right: 2.25rem; color: white; font-size: 2.65rem; cursor: pointer; z-index: 10000;}
 #lightbox-content { max-width: 80vw; max-height: 80vh; box-shadow: 0 0 20px rgba(0,0,0,0.5); border-radius: 10px; display: flex; justify-content: center; align-items: center; background: #000;}
 .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); font-size: 3rem; color: white; cursor: pointer; user-select: none; z-index: 10000; }
 .nav-left { left: 1.75rem; }
 .nav-right { right: 1.75rem; }
+
+@media (max-width: 560px) {
+	.year-section > ul { padding-left: 0.5rem; }
+	.timeline-legend { gap: 0.35rem; }
+	.legend-title { flex-basis: 100%; }
+}

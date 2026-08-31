@@ -1,270 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hektor.dev | El Arte de la Ingeniería de Incentivos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #030a05;
-            --matrix-green: #00ff41; 
-            --dark-green: #003b00;
-        }
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--bg);
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-        .code-font { font-family: 'Fira Code', monospace; }
-        
-        /* Efecto Scanlines (CRT) */
-        body::before {
-            content: " ";
-            display: block;
-            position: fixed;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
-                        linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-            z-index: 100;
-            background-size: 100% 3px, 3px 100%;
-            pointer-events: none;
-        }
-
-        /* Glassmorphism Matrix */
-        .glass-panel {
-            background: rgba(0, 15, 5, 0.85);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.05);
-        }
-
-        /* Animación LIDAR Matrix */
-        .lidar-scan {
-            position: absolute;
-            height: 1px;
-            width: 100%;
-            background: linear-gradient(90deg, transparent, var(--matrix-green), transparent);
-            opacity: 0.4;
-            animation: scan 6s linear infinite;
-            pointer-events: none;
-            z-index: 50;
-        }
-        @keyframes scan {
-            0% { top: 0%; }
-            100% { top: 100%; }
-        }
-
-        /* Brillo de texto Digital */
-        .matrix-glow {
-            text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
-        }
-
-        .fade-in { animation: fadeIn 1.5s ease-out forwards; opacity: 0; }
-        @keyframes fadeIn { to { opacity: 1; } }
-
-        /* Cursor de terminal */
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 1.1em;
-            background: var(--matrix-green);
-            margin-left: 5px;
-            animation: blink 1s steps(2, start) infinite;
-            vertical-align: middle;
-            box-shadow: 0 0 10px var(--matrix-green);
-        }
-        @keyframes blink { to { visibility: hidden; } }
-
-        /* Input Estilo Terminal */
-        input:-webkit-autofill {
-            -webkit-text-fill-color: var(--matrix-green) !important;
-            -webkit-box-shadow: 0 0 0 30px #001505 inset !important;
-        }
-        
-        input::placeholder {
-            color: rgba(0, 255, 65, 0.2);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="description" content="Perfil profesional de Héctor Costa Guzmán, profesor de programación y desarrollador independiente especializado en IA, desarrollo web, videojuegos y sistemas offline.">
+  <meta name="keywords" content="Héctor Costa Guzmán, H. Costa, profesor de programación, desarrollador independiente, programación, IA, machine learning, desarrollo web, videojuegos, Godot, Python, C++, DRM-Free, cursos offline">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="author" content="Héctor Costa Guzmán">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hcosta.github.io/">
+  <meta property="og:title" content="H. Costa - Profesor de programación y desarrollador independiente">
+  <meta property="og:image" content="https://hcosta.github.io/media/pirata.png">
+  <meta property="og:description" content="Perfil profesional de H. Costa: formación, desarrollo de software, IA, videojuegos y sistemas offline.">
+  <link id="theme-style" rel="stylesheet" href="/styles/dark.css">
+  <link rel="stylesheet" href="/styles/theme.css">
+  <title>Héctor Costa Guzmán - Profesor de programación y desarrollador indie</title>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-4">
+<body>
 
-    <div class="lidar-scan"></div>
+  <header>
+    <img src="/media/pirata.png" title="Héctor Costa Guzmán" alt="Retrato ilustrado de Héctor Costa Guzmán." width="140" height="140">
+    <button type='button' id="theme-toggle" aria-label="Cambiar tema">
+      <svg id="icon-sun" width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 3V0H9V3H7Z" fill="#ffd400"/>
+        <path d="M9 13V16H7V13H9Z" fill="#ffd400"/>
+        <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="#ffd400"/>
+        <path d="M0 9H3V7H0V9Z" fill="#ffd400"/>
+        <path d="M16 7H13V9H16V7Z" fill="#ffd400"/>
+        <path d="M3.75735 5.17157L1.63603 3.05025L3.05025 1.63603L5.17157 3.75735L3.75735 5.17157Z" fill="#ffd400"/>
+        <path d="M12.2426 10.8284L14.364 12.9497L12.9497 14.364L10.8284 12.2426L12.2426 10.8284Z" fill="#ffd400"/>
+        <path d="M3.05025 14.364L5.17157 12.2426L3.75735 10.8284L1.63603 12.9498L3.05025 14.364Z" fill="#ffd400"/>
+        <path d="M12.9497 1.63604L10.8284 3.75736L12.2426 5.17158L14.364 3.05026L12.9497 1.63604Z" fill="#ffd400"/>
+      </svg>
+  
+      <svg width="800px" height="800px" id="icon-moon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 8.00002C0 4.75562 1.93132 1.9623 4.70701 0.707031L5.65436 1.65438C5.2352 2.51383 5 3.47946 5 4.50002C5 8.08987 7.91015 11 11.5 11C12.5206 11 13.4862 10.7648 14.3456 10.3457L15.293 11.293C14.0377 14.0687 11.2444 16 8 16C3.58172 16 0 12.4183 0 8.00002Z" fill="#1d1d1d"/>
+        <path d="M11.5 7.00003L9 4.50003L11.5 2.00003L14 4.50003L11.5 7.00003Z" fill="#1d1d1d"/>
+        </svg>
+    </button>
+    <h2>Héctor Costa Guzmán - Perfil técnico</h2>
+    <nav aria-label="Menú principal">
+      <ul class="nav-bar">
+        <li><a href="/" aria-current="page">Inicio</a></li>
+        <li><a href="/proyectos/">Proyectos</a></li>
+        <li><a href="https://hektorprofe.github.io" target="_blank">Documentos</a></li>
+        <li><a href="https://github.com/hcosta" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Fondo de "Datos" -->
-    <canvas id="neuroCanvas" class="fixed top-0 left-0 w-full h-full -z-10 opacity-20"></canvas>
+  <p>¡Hola navegantes de la red! Soy Héctor Costa Guzmán, profesor de programación y desarrollador independiente. Desde 2010 trabajo en proyectos de software, desarrollo web, videojuegos y últimamente inteligencia artificial.</p>
 
-    <main class="max-w-4xl w-full z-10">
-        
-        <!-- Status Header -->
-        <div class="fade-in mb-10">
-            <div class="inline-flex items-center gap-3 px-3 py-1 rounded border border-green-500/30 bg-green-950/20 text-[9px] tracking-[0.4em] text-green-400 uppercase font-bold">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                </span>
-                CORE: ACTIVE | RADAR: SEARCHING | V_2026
-            </div>
-        </div>
+  <h2 class="achievements-subtitle">Áreas de trabajo actuales</h2>
 
-        <!-- Hero Section -->
-        <section class="text-left mb-12">
-            <h1 class="fade-in text-4xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
-                <span class="text-green-900 block text-2xl md:text-3xl mb-2 font-mono uppercase tracking-widest">Orders are legacy.</span>
-                Diseña <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-100 matrix-glow">Incentivos IA.</span>
-            </h1>
-            
-            <p class="fade-in text-lg md:text-xl text-green-800/80 max-w-xl leading-relaxed">
-                Durante 18 años programé el "cómo". <br>
-                Ahora entreno el <span class="text-green-400 font-medium italic underline decoration-green-900">porqué</span>. <br>
-                <span class="code-font text-green-500 text-xs mt-6 block border-l border-green-500/50 pl-4 py-2 bg-green-500/5">
-                    [SYSTEM_LOG] <br>
-                    > Agent: PPO_Active <br>
-                    > Sensor: LIDAR_Scanning... <br>
-                    > Target: MLVisual.com
-                </span>
-            </p>
-        </section>
+  <section id="achievements" aria-labelledby="achievements-title">
+    <ul class="achievements-list">
+      <li>
+        <strong>Inteligencia Artificial aplicada a videojuegos y simulaciones</strong>
+        <p>Mi trabajo reciente está evolucionando del Reinforcement Learning en Python hacia entornos interactivos en Godot. Tras experimentar con Grid Worlds, Gymnasium y agentes entrenados con Q-Learning y Deep Q-Networks, ahora desarrollo agentes capaces de aprender dentro de videojuegos y simulaciones visuales. En 2026 he creado agentes para Flappy Bird, conducción con obstáculos y Snake utilizando Godot RL Agents.</p>
+      </li>
+      <li>
+        <strong>Próximo Objetivo: Crear mundos simulados con agentes asistidos por LLM</strong>
+        <p>Mi siguiente línea de trabajo será construir en Godot un mundo simulado habitado por agentes potenciados con una LLM especializada en código. El objetivo es estudiar cómo diseñar comportamientos, memoria, interacción y aprendizaje dentro de un entorno visual, manteniendo el proyecto como una herramienta técnica y educativa.</p>
+      </li>
+      <li>
+        <strong>Formación y documentación técnica</strong>
+        <p>He creado más de 30 cursos sobre programación, desarrollo web y videojuegos, algunos publicados en <a href="https://www.udemy.com/user/hctorcostaguzmn/" target="_blank">Udemy</a> bajo mi marca personal <i>Hektor Profe</i>. Estos contenidos han alcanzado a más de 235.000 estudiantes y recibido más de 42.500 reseñas.</p>
+      </li>
+    </ul>
+  </section> 
 
-        <!-- Formulario -->
-        <div class="fade-in w-full max-w-lg">
-            <div class="glass-panel p-1 rounded">
-                <form name="radarForm" class="flex flex-col md:flex-row gap-1">
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="EMAIL_REQUIRED" 
-                        class="flex-1 bg-black/60 text-green-400 px-6 py-4 rounded-sm focus:outline-none focus:bg-black/80 transition-all code-font text-sm uppercase tracking-widest border-none"
-                        required
-                    >
-                    <button 
-                        type="submit" 
-                        class="bg-green-600 hover:bg-green-400 text-black font-black px-8 py-4 rounded-sm transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 group uppercase text-[10px] tracking-tighter shadow-[0_0_15px_rgba(0,255,65,0.3)]"
-                    >
-                        <span>Unirse al Radar</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"></path></svg>
-                    </button>
-                </form>
-            </div>
-            
-            <!-- Metadata -->
-            <div class="flex justify-between mt-6 px-1">
-                <div class="text-[8px] text-green-900 uppercase tracking-[0.3em] font-mono">
-                    Node: Godot-RL &bull; Env: Python3.10 &bull; Deployment: ONNX
-                </div>
-                <div class="text-[8px] text-green-500/30 uppercase tracking-[0.3em] animate-pulse font-mono">
-                    Est. 2016_Rev. 2026
-                </div>
-            </div>
+  <h2 class="achievements-subtitle">Proyectos destacados</h2>
 
-            <!-- Mensajes -->
-            <div id="successMessage" class="hidden mt-8 p-6 glass-panel rounded text-green-400 text-center">
-                <p class="code-font text-sm tracking-tighter">
-                    [CONFIRMADO] Coordenadas guardadas. <br> 
-                    <span class="text-[10px] text-green-900 mt-2 block uppercase">Espera instrucciones en tu terminal.</span>
-                </p>
-            </div>
-            <div id="errorMessage" class="hidden mt-8 p-6 glass-panel rounded border-red-900 text-red-500 text-center">
-                <p class="code-font text-sm">CRITICAL_FAILURE: Sincronización fallida.</p>
-            </div>
-        </div>
+  <section id="past" aria-labelledby="past-title">
+    <ul class="achievements-list">
+      <li>
+        <strong>MLV-Lab: IA visual para aprender haciendo</strong>
+        <p>En agosto de 2025 publiqué <a href="https://github.com/hcosta/mlvlab" target="_blank">MLV-Lab</a>, un ecosistema educativo de IA visual que permite entrenar y observar agentes desde la terminal, con entornos compatibles con Gymnasium. El proyecto busca acercar los fundamentos de la IA a estudiantes y desarrolladores mediante experimentación interactiva.</p>
+      </li>
+      <li>
+        <strong>Desarrollo de videojuegos con fines educativos</strong>
+        <p>He programado más de 20 prototipos en Godot, Unity y GameMaker: Studio. Estos proyectos combinan práctica de ingeniería, diseño de mecánicas y documentación de procesos de aprendizaje.</p>
+      </li>
+      <li>
+        <strong>Desarrollo web a medida</strong>
+        <p>He creado más de 20 proyectos web para terceros y para iniciativas propias con WordPress, Django y Nuxt, priorizando diseño funcional, rendimiento y facilidad de mantenimiento.</p>
+      </li>
+      <li> <strong>Documentación y divulgación técnica</strong> <p>He publicado <a href="https://hektorprofe.github.io/" target="_blank">más de 500 artículos y tutoriales</a> para explicar conceptos de programación y ofrecer recursos prácticos a estudiantes y desarrolladores.</p> </li> 
+      <li> <strong>Motor de renderizado 3D por CPU</strong> <p>He documentado la creación de un <a href="https://github.com/hcosta/cpu-3d-graphics" target="_blank">motor de renderizado 3D</a> con C++, SDL2 y Dear ImGui para estudiar proyecciones, rasterización y buffers en tiempo real.</p> </li> 
+      <li> <strong>🛡️ Comandar una legión de 60 aventureros en WoW Classic</strong> <p>Aunque algunos lo considerarán una anécdota trivial, gestionar una <a href="https://www.youtube.com/watch?v=VMJo8vKdqYs&ab_channel=Hector" target="_blank">guild semi-hardcore</a> de 60 almas en WoW Classic fue un experimento social y de liderazgo de los que marcan. Mejoró mis habilidades de organización y trabajo en equipo en un entorno colaborativo pero también muy competitivo. Aprendí lecciones valiosas sobre la gestión de equipos, la toma de decisiones bajo presión y cómo mantener la cohesión en un grupo diverso.</p> 
+      </li> 
+      <li> <strong>📱 Materializar “Sopamanía” para dispositivos Android</strong> <p>Mi primer (y único hasta la fecha) videojuego publicado formalmente fue <a href="https://apkpure.com/word-search-puzzle-soupmania/com.sopamania.game" target="_blank">Sopamanía</a>. Un juego de sopas de letras con tres modos y más de 100 paquetes temáticos. Consiguió 10,000 descargas antes de ser retirado por una brecha de seguridad ajena del motor GameMaker: Studio. Aunque el proyecto no tuvo la longevidad que esperaba, fue una experiencia increíblemente enriquecedora que me permitió aprender sobre el ciclo completo de un juego móvil.</p> 
+      </li> 
+      <li> <strong>📚 Ensamblar “Manga Phoenix App”, un lector multiplataforma</strong> <p>En 2014, leer manga en Android era un campo de minas (malware). Así que creé mi propio lector con web scrapping automatizado. Para mi sorpresa, <a href="https://web.archive.org/web/20160314111349/http://mangaphoenixapp.com/en/" target="_blank">Manga Phoenix</a> se viralizó, logrando más de 500,000 descargas y top 1 en <i>Comics</i> en varias regiones. Este éxito inesperado me enseñó mucho sobre la importancia de una buena UX y cómo una solución simple puede tener gran impacto.</p> 
+      </li> 
+    </ul>
+  </section> 
 
-    </main>
-
-    <!-- Footer Terminal -->
-    <footer class="fixed bottom-6 right-8 z-10 hidden md:block">
-        <div class="code-font text-[9px] text-green-950 leading-tight text-right uppercase">
-            Sovereign_Dev_Protocol <br>
-            Auth: Hector_Costa <br>
-            Status: Training_Thought <span class="cursor"></span>
-        </div>
-    </footer>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwey15oT4ChFEj06FNlhYGe3zOpe7xRxIqp98yJL70zSghZ7TwsdvEz1bhAVB7Iz9Tc/exec';
-
-        // --- Canvas Digital Rain / Neural ---
-        const canvas = document.getElementById('neuroCanvas');
-        const ctx = canvas.getContext('2d');
-        let width, height, particles = [];
-
-        function resize() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-        }
-
-        class DigitalNode {
-            constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.3;
-                this.vy = (Math.random() - 0.5) * 0.3;
-                this.size = Math.random() * 1.5;
-            }
-            update() {
-                this.x += this.vx; this.y += this.vy;
-                if (this.x < 0 || this.x > width) this.vx *= -1;
-                if (this.y < 0 || this.y > height) this.vy *= -1;
-            }
-        }
-
-        function init() {
-            resize();
-            particles = Array.from({length: 50}, () => new DigitalNode());
-        }
-
-        function draw() {
-            ctx.clearRect(0, 0, width, height);
-            ctx.strokeStyle = 'rgba(0, 255, 65, 0.08)';
-            ctx.fillStyle = 'rgba(0, 255, 65, 0.2)';
-            ctx.lineWidth = 0.5;
-
-            particles.forEach((p, i) => {
-                p.update();
-                ctx.fillRect(p.x, p.y, p.size, p.size); // Puntos cuadrados (pixelados)
-                
-                particles.slice(i + 1).forEach(p2 => {
-                    const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-                    if (dist < 180) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        ctx.stroke();
-                    }
-                });
-            });
-            requestAnimationFrame(draw);
-        }
-
-        window.addEventListener('resize', init);
-        init(); draw();
-
-        // --- Form Submission ---
-        const form = document.forms['radarForm'];
-        const successMsg = document.getElementById('successMessage');
-        const errorMsg = document.getElementById('errorMessage');
-        const btn = form.querySelector('button');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            btn.disabled = true;
-            btn.innerHTML = 'SYNCING...';
-            
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    form.classList.add('hidden');
-                    successMsg.classList.remove('hidden');
-                })
-                .catch(error => {
-                    btn.disabled = false;
-                    btn.innerHTML = 'RETRY';
-                    errorMsg.classList.remove('hidden');
-                });
-        });
-    </script>
+  <script src="/js/theme.js"></script>
+  
 </body>
 </html>
-

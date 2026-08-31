@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Cronología de Expediciones de Héctor Costa Guzmán: un registro de proyectos, experimentos y exploraciones en el mundo del código.">
+  <meta name="description" content="Trayectoria técnica de Héctor Costa Guzmán: proyectos de programación, desarrollo web, videojuegos, formación y documentación.">
   <meta name="keywords" content="timeline, cronologia, proyectos, experimentos, programación, desarrollo, H. Costa, Héctor Costa Guzmán, logros">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
@@ -11,7 +11,7 @@
   <link id="theme-style" rel="stylesheet" href="/styles/dark.css">
   <link rel="stylesheet" href="/styles/theme.css">
   <link rel="stylesheet" href="/styles/timeline.css">
-  <title>Cronología de Expediciones - H. Costa</title>
+  <title>Héctor Costa Guzmán - Trayectoria técnica</title>
 </head>
 <body>
 
@@ -33,15 +33,14 @@
         <path d="M11.5 7.00003L9 4.50003L11.5 2.00003L14 4.50003L11.5 7.00003Z" fill="#1d1d1d"/>
       </svg>
     </button>
-    <h2>Cronología de Expediciones de H. Costa</h2>
+   <h2>Héctor Costa Guzmán - Trayectoria técnica</h2>
     <nav aria-label="Menú principal">
       <ul class="nav-bar">
         <li><a href="/">Inicio</a></li>
         <!-- <li><a href="/arsenal/">Arsenal</a></li>
         <li><a href="/bitacora/">Bitácora</a></li> -->
-        <li><a href="/cronologia/" aria-current="page">Cronología</a></li>
+        <li><a href="/proyectos/" aria-current="page">Proyectos</a></li>
         <li><a href="https://hektorprofe.github.io" target="_blank">Documentos</a></li>
-        <li><a href="https://forms.gle/hcdMHGYkHPvvFJe87" target="_blank">Contacto</a></li>
         <li><a href="https://github.com/hcosta" target="_blank">GitHub</a></li>
       </ul>
     </nav>
@@ -50,9 +49,43 @@
   <p class="quote">
     <i>"Nunca dejes de crear; ¡siempre hay un experimento glorioso esperando a explotar!"</i>
   </p>
+  <div class="timeline-legend" aria-label="Categorías de la cronología">
+    <div class="timeline-filter-list" role="group" aria-label="Filtrar por categoría">
+      <button type="button" class="category-tag category-curso" data-category="curso" aria-pressed="false">Curso</button>
+      <button type="button" class="category-tag category-montaje" data-category="montaje" aria-pressed="false">Montaje</button>
+      <button type="button" class="category-tag category-soldadura" data-category="soldadura" aria-pressed="false">Soldadura</button>
+      <button type="button" class="category-tag category-web" data-category="web" aria-pressed="false">Página Web</button>
+      <button type="button" class="category-tag category-modulo" data-category="modulo" aria-pressed="false">Módulo</button>
+      <button type="button" class="category-tag category-apuntes" data-category="apuntes" aria-pressed="false">Apuntes</button>
+      <button type="button" class="category-tag category-social" data-category="social" aria-pressed="false">Social</button>
+      <button type="button" class="category-tag category-videojuego" data-category="videojuego" aria-pressed="false">Videojuego</button>
+      <button type="button" class="category-tag category-proyecto" data-category="proyecto" aria-pressed="false">Proyecto</button>
+      &nbsp;<button type="button" class="timeline-filter-reset" aria-label="Limpiar filtros">Reiniciar</button>
+    </div>
+  </div>
   <div class="year-section">
     <ul>
-      <!-- <li>Podcast Jodida Realidad <i>(próximamente)</i></li> -->
+      <li>AI Snake 2D [Godot 4, Godot RL Agents]:  
+        <a href="/media/ai-snake-2d.mp4">demo</a>,
+        <a href="https://github.com/hcosta/godot-rl-projects/ai-snake-2d">repo</a>
+      </li>
+      <li>AI Cars 2D [Godot 4, Godot RL Agents]:  
+        <a href="/media/ai-cars-2d.mp4">demo</a>,
+        <a href="https://github.com/hcosta/godot-rl-projects/ai-cars-2d">repo</a>
+      </li>
+      <li>AI Flappy 2D [Godot 4, Godot RL Agents]:  
+        <a href="/media/ai-flappy-2d.mp4">demo</a>,
+        <a href="https://github.com/hcosta/godot-rl-projects/ai-flappy-2d">repo</a>
+      </li>
+    </ul>
+    <h3>2026</h3>
+  </div>
+  <div class="year-section">
+    <ul>
+      <li>MLV-Lab: Ecosistema educativo de IA visual [Python, PyPI]:
+        <a href="/media/mlvlab.mp4">demo</a>,
+        <a href="https://github.com/hcosta/mlvlab" target="_blank">repo</a>
+      </li>
       <li>Snake IA: De Q-Learning a DQN [Python, Tensorflow]:  
         <a href="/media/snake-ia-1.gif">demo</a>,
         <a href="https://github.com/hcosta/snake-ia">repo</a>
@@ -82,7 +115,7 @@
         <!-- <a href="/media/descubre-godot-1.gif">gif</a>,  
         <a href="/media/descubre-godot-2.gif">gif</a> -->
       </li>
-      <li>Página para escuela Godot Arcano con suscripción [Django]:
+      <li>Página para Escuela Godot Arcano con suscripción [Django]:
         <a href="/media/godot-arcano.mp4">demo</a> 
       </li>
       <li>Introducción a Python con Python Arcade [PDF, Python]:  
@@ -94,10 +127,10 @@
 
   <div class="year-section">
     <ul>
-      <li>Curso Python asistido con ChatGPT [ChatGPT, Python]:
+      <li>(Curso) Python asistido con ChatGPT [ChatGPT, Python]:
         <a href="https://www.udemy.com/course/python-asistido-chatgpt/">link</a>
       </li>
-      <li>Experimento Arduino: Coche Robótico [Arduino]:
+      <li>(Montaje) Coche Robótico [Arduino]:
         <a href="/media/coche-robotico.mp4">demo</a>
       </li>
       <li>Experimento soldadura: Harpa con sensores [Electrónica]:
@@ -125,7 +158,7 @@
       <li>Experimento soldadura: Fidget Spinner LED [Electrónica]:
         <a href="/media/fidget-spinner.mp4">demo</a>
       </li>
-      <li>Página para plataforma Aprende GDScript [Django, Godot 3.5]:
+      <li>Página para Plataforma Aprende GDScript [Django, Godot 3.5]:
         <a href="/media/plataforma-interactiva.mp4">demo</a>
       </li>
     </ul>
@@ -134,7 +167,7 @@
 
   <div class="year-section">
     <ul>
-      <li>CPU 3D Engine [C++, SDL2]:
+      <li>CPU Renderer [C++, SDL2]:
         <a href="/media/cpu-3d-renderer.gif">demo</a>,
         <a href="https://hektorprofe.github.io/graficos-3d/">docs</a>,  
         <a href="https://github.com/hcosta/cpu-3d-graphics">repo</a>     
@@ -182,7 +215,7 @@
       </li>
       <li>CPU 3D Renderer [C++, SDL2]:
         <a href="/media/cpu-3d-graphics.gif">demo</a>,
-        <a href="https://github.com/hektorprofe/3d-graphics">repo</a>
+        <a href="https://github.com/hcosta/cpu-renderer">repo</a>
       </li>
       <li>Curso API Rest con Django Rest Framework [Django]:
         <a href="https://hektorprofe.github.io/django/api-django-rest/">docs</a>
@@ -248,7 +281,7 @@
 
   <div class="year-section">
     <ul>
-      <li>Página para academia Hektor Profe [Nuxt 2, Django]:
+      <li>Página para Academia Hektor Profe [Nuxt 2, Django]:
         <a href="/media/demo-academia.mp4">demo</a>
       </li>
       <li>Curso Aprende Django creando Proyectos [Django]:
@@ -335,7 +368,7 @@
         <a href="https://www.udemy.com/course/python-3-al-completo-desde-cero/">link</a>,
         <a href="https://hektorprofe.github.io/python/">docs</a>
       </li>
-      <li>Artículos sobre matemáticas y geometría [Docs]:
+      <li>Artículos sobre Matemáticas y geometría [Docs]:
         <a href="https://hektorprofe.github.io/escueladevideojuegos/articulos/el-eje-de-coordenadas/">docs</a>
       </li>
       <li>Artículos sobre desarrollo de videojuegos [Docs]:
@@ -421,48 +454,48 @@
 
   <div class="year-section">
     <ul>
-      <li>Página para administración lotería [Django]: 
+      <li>Página para Administración lotería [Django]: 
         <a href="/media/loterias.jpg">img</a>, 
         <a href="/media/loterias-2.jpg">img</a>, 
         <a href="/media/loterias-3.jpg">img</a> 
       </li>
-      <li>Página para pedidos de vapeadores [Django]: 
+      <li>Página para Pedidos de vapeadores [Django]: 
         <a href="/media/vapeadores.jpg">img</a>, 
         <a href="/media/vapeadores-1.jpg">img</a> 
       </li>
-      <li>Página para tienda de bombillas led [Django]: 
+      <li>Página para Tienda de bombillas led [Django]: 
         <a href="/media/leds.jpg">img</a>, 
         <a href="/media/leds-1.jpg">img</a> 
       </li>
-      <li>Página para catálogo de raquetas [Django]: 
+      <li>Página para Catálogo de raquetas [Django]: 
         <a href="/media/paddle.jpg">img</a>, 
         <a href="/media/paddle-1.jpg">img</a> 
       </li>
-      <li>Página para tienda de calzados [Django]: 
+      <li>Página para Tienda de calzados [Django]: 
         <a href="/media/calzados.jpg">img</a>, 
         <a href="/media/calzados-1.jpg">img</a> 
       </li>
-      <li>Página para portafolio constructora [Django]: 
+      <li>Página para Portafolio constructora [Django]: 
         <a href="/media/constructora.jpg">img</a>, 
         <a href="/media/constructora-1.jpg">img</a> 
       </li>
-      <li>Página para tienda colorantes alimentarios [Django]: 
+      <li>Página para Tienda colorantes alimentarios [Django]: 
         <a href="/media/colorantes.jpg">img</a>, 
         <a href="/media/colorantes-1.jpg">img</a> 
       </li>
-      <li>Página para catálogo soportes digitales [Django]
+      <li>Página para Catálogo soportes digitales [Django]
         <a href="/media/soportes-digitales.jpg">img</a>, 
         <a href="/media/soportes-digitales-1.jpg">img</a> 
       </li>
-      <li>Página para empresa prevención de incendios [Django]: 
+      <li>Página para Empresa prevención de incendios [Django]: 
         <a href="/media/incendios.jpg">img</a>, 
         <a href="/media/incendios-2.jpg">img</a> 
       </li>
-      <li>Página para gestoría y directorio de empresas [Django]
+      <li>Página para Gestoría y directorio de empresas [Django]
         <a href="/media/gestoria.jpg">img</a>,
         <a href="/media/fidelity.jpg">img</a>
       </li>
-      <li>Página para clínica de otorrinolaringología [Django]: 
+      <li>Página para Clínica de otorrinolaringología [Django]: 
         <a href="/media/instituto.jpg">img</a>, 
         <a href="/media/instituto-1.jpg">img</a> 
       </li>
@@ -472,20 +505,20 @@
 
   <div class="year-section">
     <ul>
-      <li>Página para escuela de yoga y pilates [Wordpress]: 
+      <li>Página para Escuela de yoga y pilates [Wordpress]: 
         <a href="https://web.archive.org/web/20141221111047/http://pilatesyogazaragoza.com/">archive</a>
       </li>
-      <li>Página para escritor y su obra [Wordpress]:
+      <li>Página para Escritor y su obra [Wordpress]:
         <a href="https://web.archive.org/web/20190417173516/http://www.alexdesande.com/">archive</a></li>
       <li>Gestión de expedientes para secretaría [OpenERP]:
         <a href="/media/secretaria-openerp.png">logo</a>,
         <a href="/media/secretaria-openerp.zip">zip</a>
       </li>
-      <li>Control de inventarios e incidencias [OpenERP]:
+      <li>Control de Inventarios e incidencias [OpenERP]:
         <a href="/media/inventari-openerp.png">logo</a>,
         <a href="/media/inventari-openerp.zip">zip</a>
       </li>
-      <li>Monitor de impresiones del profesorado [OpenERP]:
+      <li>Monitor de Impresiones del profesorado [OpenERP]:
         <a href="/media/impressions-openerp.png">logo</a>,
         <a href="/media/impressions-openerp.zip">zip</a>
       </li>
@@ -506,11 +539,11 @@
 
   <div class="year-section">
     <ul>
-      <li>Página para salas de chat web tipo mIRC (XinXat) [PHP]:
+      <li>Página para Salas de chat web tipo mIRC (XinXat) [PHP]:
         <a href="/media/xinxat.jpg">img</a>,
         <a href="/media/xinxat-1.jpg">img</a>
       </li>
-      <li>Página para grupo de música [PHP]:
+      <li>Página para Grupo de música [PHP]:
         <a href="https://web.archive.org/web/20110701170820/http://www.suiteofficial.net/">archive</a>
       </li>
       <li>Videojuego La Brisca [Game, Java]:
@@ -530,7 +563,7 @@
 
   <div class="year-section">
     <ul>
-      <li>Página para red social de series (MySeriesList) [PHP]:
+      <li>Página para Red social de series (MySeriesList) [PHP]:
         <a href="/media/myserieslist.jpg">img</a>,
         <a href="/media/myserieslist-1.jpg">img</a>,
         <a href="/media/myserieslist-2.jpg">img</a>
@@ -554,10 +587,10 @@
 
   <div class="year-section">
     <ul>
-      <li>Página para molino y tienda de aceite [PHP, Angular.js]:
+      <li>Página para Molino y tienda de aceite [PHP, Angular.js]:
         <a href="https://web.archive.org/web/20111123143049/http://www.art-oli.com/">archive</a>
       </li>
-      <li>Página para gestión de votaciones (Yasps) [PHP]:
+      <li>Página para Gestión de votaciones (Yasps) [PHP]:
         <a href="/media/yasps.png">img</a>
       </li>
     </ul>
@@ -565,7 +598,7 @@
 
   <div class="year-section">
     <ul class="no-top-margin">
-      <li>Página para clan de jugadores [Jedi Academy, Dreamweaver]:
+      <li>Página para Clan de jugadores [Jedi Academy, Dreamweaver]:
         <a href="https://web.archive.org/web/20110902121733/http://shadows.nls.es/portada2.htm">archive</a>
       </li>
       <li>Tecnologies sense fils - Treball de recerca [PDF]:
@@ -573,17 +606,6 @@
       </li>
     </ul>
   </div>
-  <br>
-
-  <footer>
-    <ul class="footer-links">
-      <li><a href="https://forms.gle/hcdMHGYkHPvvFJe87" target="_blank" title="Contacto">
-          <svg hwidth="23" height="23" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g> <path class="st0" d="M440.917,67.925H71.083C31.827,67.925,0,99.752,0,139.008v233.984c0,39.256,31.827,71.083,71.083,71.083 h369.834c39.255,0,71.083-31.827,71.083-71.083V139.008C512,99.752,480.172,67.925,440.917,67.925z M178.166,321.72l-99.54,84.92 c-7.021,5.992-17.576,5.159-23.567-1.869c-5.992-7.021-5.159-17.576,1.87-23.567l99.54-84.92c7.02-5.992,17.574-5.159,23.566,1.87 C186.027,305.174,185.194,315.729,178.166,321.72z M256,289.436c-13.314-0.033-26.22-4.457-36.31-13.183l0.008,0.008l-0.032-0.024 c0.008,0.008,0.017,0.008,0.024,0.016L66.962,143.694c-6.98-6.058-7.723-16.612-1.674-23.583c6.057-6.98,16.612-7.723,23.582-1.674 l152.771,132.592c3.265,2.906,8.645,5.004,14.359,4.971c5.706,0.017,10.995-2.024,14.44-5.028l0.074-0.065l152.615-132.469 c6.971-6.049,17.526-5.306,23.583,1.674c6.048,6.97,5.306,17.525-1.674,23.583l-152.77,132.599 C282.211,284.929,269.322,289.419,256,289.436z M456.948,404.771c-5.992,7.028-16.547,7.861-23.566,1.869l-99.54-84.92 c-7.028-5.992-7.861-16.546-1.869-23.566c5.991-7.029,16.546-7.861,23.566-1.87l99.54,84.92 C462.107,387.195,462.94,397.75,456.948,404.771z"/> </g> </svg>
-        </a></li><li><a href="https://github.com/hcosta" target="_blank" title="GitHub">
-          <svg width="23" height="23" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g transform="translate(-140.000000, -7559.000000)" fill="currentColor"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"> </path> </g> </g> </g> </svg>
-        </a></li>
-    </ul>
-  </footer>
 
   <!-- Lightbox -->
   <div id="lightbox">
@@ -594,6 +616,7 @@
   </div>
 
   <script src="/js/theme.js"></script>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.js"></script>
   <script src="/js/timeline.js"></script>
 
 </body>
