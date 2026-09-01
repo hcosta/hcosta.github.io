@@ -179,13 +179,36 @@ function setupTimelineFilters() {
     const filterButtons = document.querySelectorAll(".timeline-filter-list [data-category]");
     const resetButton = document.querySelector(".timeline-filter-reset");
 
+    function syncUrl() {
+        const url = new URL(window.location.href);
+        const categories = [...selectedCategories].sort();
+
+        if (categories.length > 0) {
+            url.searchParams.set("category", categories.join(","));
+        } else {
+            url.searchParams.delete("category");
+        }
+
+        window.history.replaceState({}, "", url);
+    }
+
+    function getRequestedCategories() {
+        const params = new URLSearchParams(window.location.search);
+        const rawValue = params.get("category") || "";
+
+        return rawValue
+            .split(",")
+            .map((category) => category.trim().toLowerCase())
+            .filter((category) => category.length > 0)
+            .filter((category) => document.querySelector(`.timeline-filter-list [data-category="${category}"]`));
+    }
+
     function applyFilters() {
         document.querySelectorAll(".year-section").forEach((section) => {
             let visibleItems = 0;
             section.querySelectorAll(":scope > ul > li").forEach((item) => {
-                const visible = selectedCategories.size === 0 || selectedCategories.has(
-                    [...item.classList].find((className) => className.startsWith("timeline-item--"))?.replace("timeline-item--", "")
-                );
+                const itemCategory = [...item.classList].find((className) => className.startsWith("timeline-item--"))?.replace("timeline-item--", "");
+                const visible = selectedCategories.size === 0 || selectedCategories.has(itemCategory);
                 item.hidden = !visible;
                 if (visible) visibleItems++;
             });
@@ -196,7 +219,10 @@ function setupTimelineFilters() {
             button.setAttribute("aria-pressed", selectedCategories.has(button.dataset.category));
         });
         resetButton.disabled = selectedCategories.size === 0;
+        syncUrl();
     }
+
+    getRequestedCategories().forEach((category) => selectedCategories.add(category));
 
     filterButtons.forEach((button) => {
         button.addEventListener("click", () => {
