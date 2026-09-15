@@ -46,6 +46,30 @@
 
   <p class="quote"><i>Divagaciones de un programador en la era de la Inteligencia Artificial.</i></p>
 
+De la crítica a la trinchera: Conectar con la entrada anterior (el enfado por los agentes de pago y el vibe coding caro) para explicar que la mejor forma de criticar un sistema es construir una alternativa local.
+
+El proyecto como embrión (cero promesas): Dejar claro que no es un curso terminado, ni un producto comercial, ni una promesa. Es un experimento técnico en tu disco duro para ver hasta dónde se puede llegar.
+
+El stack libre y privado: Integración de Godot con Ollama (modelos abiertos como Qwen). Ejecución 100% en local, sin telemetría, sin cuotas mensuales y utilizando la GPU que ya tienes.
+
+El fallo del enfoque tradicional: Explicar el problema de darle control absoluto al LLM (agentes que filosofan, alucinan o gastan cientos de dólares en llamadas API para solucionar fallos que un desarrollador detecta en dos minutos).
+
+El patrón del Validador (Godot manda): La arquitectura clave. El motor determinista en Godot sostiene la física y las reglas estrictas del mundo; el LLM es un mero emisor de intenciones en JSON. Si la acción propuesta rompe una regla, el motor la rechaza automáticamente.
+
+Aprender la arquitectura, no la sintaxis: Reivindicar que la verdadera ventaja técnica en la era de la IA no es teclear rápido, sino saber diseñar el contrato de reglas y mantener el control total del software.
+
+  <article class="blog-article">
+    <h2 class="achievements-subtitle">15 de Septiembre de 2026</h2>
+    <p>Tras el último post me quedé con un regusto amargo, reconozco que lo escribí como terapia para volcar mis pensamientos en algún lado. Pero quizá la mejor forma de criticar el sistema no sea diciendo lo que no me gusta de él, sino construyendo una alternativa.</p>
+    <p>Como desarrollador de videojuegos amateur, una visión que tengo desde que aparecieron los LLM es conseguir que esas inteligencias simulen ser “compañeras” o asistentes virtuales en mis videojuegos. No me refiero a simples NPCs parlantes, eso es muy fácil, sino a conseguir que sean capaces de tomar decisiones para jugar contigo o contra ti. Esa fue la razón que me llevó a aprender Reinforcement Learning, primero en Python y más tarde en Godot. Como resultado logré crear simulaciones locales que fueron satisfactorias para resolver juegos basados en observaciones planificadas, pero no dejaban de ser experimentos y la meta se veía muy, muy lejos, por no decir imposible.</p>
+    <p>El problema no era el Reinforcement Learning, era mi enfoque. Estaba buscando la solución en el lugar incorrecto. Cuando entrenas una red neuronal con RL para que solucione un problema concreto, si sucede una situación no planificada durante la inferencia, la red simplemente colapsa o toma decisiones erráticas; no sabe procesar un entorno para el que no ha sido entrenada. Los LLM tienen el problema opuesto: son tan flexibles que, en lugar de bloquearse, alucinan y se inventan cosas.</p>
+    <p>Entonces, si entrenar un agente especialista con Reinforcement Learning no es la respuesta, ¿cómo consigues que un modelo de lenguaje aprenda a jugar contigo o contra ti? La respuesta está ahí mismo, en la palabra lenguaje. Cuando escribí el artículo anterior escribí “Te contaré un secreto, se llaman modelos del lenguaje porque dependen... del lenguaje”. Esa obviedad se quedó en mi subconsciente durante más de una semana y empecé a darle vueltas.</p>
+    <p>¿Y si la clave está en el lenguaje y no en la interacción en tiempo real? ¿Podría un LLM, con suficiente contexto textual, tomar decisiones? Tenía que comprobarlo, así que me puse manos a la obra. Creé un pequeño sandbox textual en Godot con una arquitectura basada en tres scripts: uno para configurar el mundo con dos personajes, otro para controlar cada acción que puede tomar el modelo y el último para mapear las posibles acciones que puede tomar el modelo en cada turno. La idea era replicar un MUD (Multi-User Dungeon), uno de los primeros géneros de videojuegos donde podías vivir aventuras inspiradas en el universo de Dragones y Mazmorras, todo sin gráficos, solo mediante información textual. Luego conecté el mapeador con la API de Ollama y ya lo tenía.</p>
+    <p>El experimento me dejó algo claro, y es que a los LLM les gusta mucho hablar. Supongo que no por algo se llaman modelos del lenguaje… Mi prototipo simulaba un sistema de supervivencia muy básico donde los agentes podían moverse entre zonas, recolectar manzanas, comérselas, talar árboles, debían dormir para recuperar energía, etc. Curiosamente, preferían elegir la acción de "hablar" antes que comer o descansar, literalmente se morían de hambre para poder filosofar entre ellos 5 minutos más.</p>
+    <p>Puede que haya sido un fiasco de experimento, pero me ha servido para entender que no se puede dar control absoluto al LLM. Mi siguiente objetivo es simplificar el sistema y empezar de menos a más, poniendo al LLM a jugar bajo reglas estrictas pero sin perder un componente de planificación y estrategia.</p>
+    <p>A ver qué consigo, os mantendré informados.</p>
+  </article>
+
   <article class="blog-article">
     <h2 class="achievements-subtitle">5 de Septiembre de 2026</h2>
     <p>Desde hace tiempo cuando entro a YouTube me aparecen decenas de vídeos sobre como usar agentes, la nueva versión de ChatGPT, Claude, etc. Me inquieta ver a la gente desembolsar felizmente dinero a una empresa mientras le da permiso para que controle cualquier aspecto de su dispositivo, y por extensión, de su vida. ¿Privacidad? ¿Eso qué es? Como les cuelen una puerta trasera en uno de esos programas, si es que no existe ya, va a ser muy divertido. Yo me pensaría muy bien si instalar estos programas, y de hacerlo, lo haría en un entorno limitado.
@@ -55,7 +79,7 @@
     <p>Así que para ser un poco más libre, la próxima vez que te aparezca un YouTuber entusiasmado anunciando la nueva revolución de la IA mientras te cuela publicidad de algún producto, haz clic derecho y pon "No recomendarme este canal" o directamente desactiva tu historial. Deja de preocuparte por el futuro y céntrate en lo importante, estudia las bases, ignora el ruido de las modas y simplemente disfruta de tu tiempo experimentando.</p>
     <p>Como conclusión una verdad incómoda. Si pretendes que la IA desarrolle un programa o te dé una solución a la que tú no sabrías llegar por ti mismo, aunque te llevase años, entonces, simple y llanamente, no entiendes cómo usar esta tecnología y eres carne de cañón para Sam Altman y sus amigos. Tienes tres opciones: si eres rico vas a vivir de puta madre. Si eres pobre puedes dedicarte a estudiar, y mejorar tu comprensión lectora, o esperar a que algún día implanten eso que dice Elon Musk de la renta mínima universal. Eso sí, no esperes ahorrar ni un céntimo, porque te lo pagarán en CBDC que se quemarán automáticamente si no las usas.</p>
     <p>Ese es el mundo al que vamos, tú sabrás qué hacer.</p>
-</article>
+  </article>
 
   <footer aria-hidden="true"></footer>
 
